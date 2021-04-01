@@ -49,7 +49,7 @@ sleep(2);
       				<td><center>".ucfirst($row['phno'])."</center></td>
 					<td><center>".($row['age'])."</center></td>
 					<td><center>".ucfirst($row['gender'])."</center></td>
-      				<td><center>".ucfirst($row['thana']).", ".ucfirst($row['district'])."</center></td>
+      				<td><center>".ucwords($row['thana']).", ".ucfirst($row['district'])."</center></td>
       				<td><center>".strtoupper($row['gp'])."</center></td>
    					 </tr>
   						</tbody>");
