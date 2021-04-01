@@ -37,66 +37,66 @@
 
                <header class="main-header clearfix" data-sticky_header="true">
 
-<div class="top-bar clearfix">
+            <div class="top-bar clearfix">
 
-    <div class="container">
+                <div class="container">
 
-        <div class="row">
+                    <div class="row">
 
-            <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12">
 
-                <p>Welcome To Blood Donors Directory </p>
+                            <p>Welcome To Blood Donors Directory </p>
 
-            </div>
+                        </div>
 
-            <div class="col-md-4 col-sm-12">
-                <center>
-                    <p><a href="need-blood"><blink>Need Blood ?</blink></a></p>
-                </center>
-            </div>
-            <div class="col-md-4col-sm-12">
-                <div class="top-bar-social">
-                    <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
-                    <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
-                </div>   
-            </div> 
+                        <div class="col-md-4 col-sm-12">
+                            <center>
+                                <p><a href="need-blood"><blink>Need Blood ?</blink></a></p>
+                            </center>
+                        </div>
+                        <div class="col-md-4col-sm-12">
+                            <div class="top-bar-social">
+                                <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
+                            </div>   
+                        </div> 
 
-        </div>
+                    </div>
 
-    </div> <!--  end .container -->
+                </div> <!--  end .container -->
 
-</div> <!--  end .top-bar  -->
+            </div> <!--  end .top-bar  -->
 
-<section class="header-wrapper navgiation-wrapper">
+            <section class="header-wrapper navgiation-wrapper">
 
-    <div class="navbar navbar-default">			
-        <div class="container">
+                <div class="navbar navbar-default">			
+                    <div class="container">
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="logo" href="index"><img alt="" src="images/logo.png"></a>
-            </div>
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="logo" href="index"><img alt="" src="images/logo.png"></a>
+                        </div>
 
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="drop"><a href="index" title="Home Layout 01">Home</a></li>
-                    <li><a href="need-blood" title="Donors">Donors</a></li>
-                    <li><a href="be-a-part" title="BE A PART">BE A PART</a></li>
-                    <li><a href="about-bdd" title="About BDD">About BDD</a></li>
-                    <li><a href="about-us" title="About Us">About Us</a></li>
-                    <li><a href="contact" title="Contact">Contact</a></li>
-                    <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="Login">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="drop"><a href="index" title="Home Layout 01">Home</a></li>
+                                <li><a href="need-blood" title="Donors">Donors</a></li>
+                                <li><a href="be-a-part" title="BE A PART">BE A PART</a></li>
+                                <li><a href="about-bdd" title="About BDD">About BDD</a></li>
+                                <li><a href="about-us" title="About Us">About Us</a></li>
+                                <li><a href="contact" title="Contact">Contact</a></li>
+                                <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="Login">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-</section>
+            </section>
 
 </header> <!-- end main-header  -->
 
@@ -131,10 +131,7 @@
 if(!(isset($_GET['gp'])))
 {
 ?>
-<section class="section-content-block section-process">
-
-            
-
+    <section class="section-content-block section-process">
                 <div class="row">
 
                     <div class="col-md-12 col-sm-12 text-center">
@@ -302,29 +299,95 @@ else
                             <img src="images/appointment.jpg" alt="appointment image">
                         </figure>
                     </div> <!--  end col-lg-6  -->
-
-
+                    
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> 
 
                         <div class="appointment-form-wrapper text-center clearfix">
                             <h3 class="join-heading">Registration</h3>
+                            <p style="padding-bottom:10px;">Give Your Informetion</p>
+                        <div id="al">
+                        </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                            divisionsList();
+                            thanaList();
+                        });
+                    </script>
+                    <script>
+                    // Division Section select
+                    function divisionsList() {
+                        // get value from division lists
+                        var diviList = document.getElementById('divisions').value;
 
-                            <div id="al">
+                        // set barishal division districts
+                        if(diviList == 'Barishal'){		
+                            var disctList = '<option disabled selected>Select District</option><option value="Barguna">Barguna</option><option value="Barishal">Barishal</option><option value="Bhola">Bhola</option><option value="Jhalokati">Jhalokati</option><option value="Patuakhali">Patuakhali</option><option value="Pirojpur">Pirojpur</option>';
+                        }
+                        // set Chattogram division districts
+                        else if(diviList == 'Chattogram') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Bandarban">Bandarban</option><option value="Chandpur">Chandpur</option><option value="Chattogram">Chattogram</option><option value="Cumilla">Cumilla</option><option value="Cox\'s Bazar">Cox\'s Bazar</option><option value="Feni">Feni</option><option value="Khagrachhari">Khagrachhari</option><option value="Noakhali">Noakhali</option><option value="Rangamati">Rangamati</option>';	
+                        }
+                        // set Dhaka division districts
+                        else if(diviList == 'Dhaka') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Dhaka">Dhaka</option><option value="Faridpur">Faridpur</option><option value="Gazipur">Gazipur</option><option value="Gopalganj">Gopalganj</option><option value="Kishoreganj">Kishoreganj</option><option value="Madaripur">Madaripur</option><option value="Manikganj">Manikganj</option><option value="Munshiganj">Munshiganj</option><option value="Narayanganj">Narayanganj</option><option value="Narsingdi">Narsingdi</option><option value="Rajbari">Rajbari</option><option value="Shariatpur">Shariatpur</option><option value="Tangail">Tangail</option>';
+                        }
+                        // set Khulna division districts
+                        else if(diviList == 'Khulna') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Bagerhat">Bagerhat</option><option value="Chuadanga">Chuadanga</option><option value="Jessore">Jessore</option><option value="Jinaidaha">Jinaidaha</option><option value="Khulna">Khulna</option><option value="Magura">Magura</option><option value="Meherpur">Meherpur</option><option value="Narail">Narail</option><option value="Satkhira">Satkhira</option>';
+                        }
+                        // set Mymensingh division districts
+                        else if(diviList == 'Mymensingh') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Mymensingh">Mymensingh</option><option value="Netrokona">Netrokona</option><option value="Jamalpur">Jamalpur</option><option value="Sherpur">Sherpur</option>';           
+                        }
+                        // set Rajshahi division districts
+                        else if(diviList == 'Rajshahi') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Rajshahi">Rajshahi</option><option value="Natore">Natore</option><option value="Pabna">Pabna</option><option value="Bogura">Bogura</option><option value="Chapainawabganj">Chapainawabganj</option><option value="Joypurhat">Joypurhat</option><option value="Naogaon">Naogaon</option><option value="Sirajganj">Sirajganj</option>';
+                        }
+                        // set Rangpur division districts
+                        else if(diviList == 'Rangpur') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Rangpur">Rangpur</option><option value="Dinajpur">Dinajpur</option><option value="Kurigram">Kurigram</option><option value="Nilphamari">Nilphamari</option><option value="Gaibandha">Gaibandha</option><option value="Thakurgaon">Thakurgaon</option><option value="Panchagarh">Panchagarh</option><option value="Lalmonirhat">Lalmonirhat</option>';
+                        }
+                        // set Sylhet division districts
+                        else if(diviList == 'Sylhet') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Habiganj">Habiganj</option><option value="Moulvibazar">Moulvibazar</option><option value="Sunamganj">Sunamganj</option><option value="Sylhet">Sylhet</option>';           
+                        }
+                        else if(diviList == 'Select Division') {
+                            var disctList = '<option value="" disabled selected>Select District</option>';
+                        }
+                        //  set/send districts name to District lists from division
+                        document.getElementById("district").innerHTML= disctList;
+                    }
 
-                            </div>
-
+                    // Thana Section select
+                    function thanaList(){
+                        var DisList = document.getElementById('district').value;
+                        if(DisList == 'Barguna') {
+                            var thanaList = '<option disabled selected>Select Thana</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
+                        }
+                        else if(DisList == 'Bhola') {
+                            var thanaList = '<option disabled selected>Select Thana</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
+                        }
+                        else if(DisList == "") {
+                            var thanaList = '<option disabled selected>Select Thana</option>';
+                        }
+                        document.getElementById("thana").innerHTML= thanaList;
+                    }
+                </script>
 
                             <form class="appoinment-form" id ="send" action="">
 
                                 <div class="form-group col-md-6">
-                                    <input id="your_name" class="form-control" placeholder="*Name" type="text" required name="name">
+                                    <input id="first_name" class="form-control" placeholder="First Name" type="text" required name="first_name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input id="your_phone" class="form-control" placeholder="*Phone" type="number" required min=1111111111 max="9999999999" name="phno">
+                                    <input id="last_name" class="form-control" placeholder="Last Name" type="text" required name="last_name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input id="phone" class="form-control" placeholder="Phone" type="number" maxlength="11" requireds name="phno">
                                 </div>
                                <div class="form-group col-md-6">
-                                    <select id="gp" class="form-control" placeholder="*Blood Group" type="select" required  name="gp">
-                                        <option value="">*Blood Group</option>
+                                    <select id="gp" class="form-control" placeholder="Blood Group" type="select" required  name="gp">
+                                        <option disabled selected value="">Blood Group</option>
                                         <option <?php if($gp=='A+'){echo "selected";}  ?> >A+</option>
                                         <option <?php if($gp=='A-'){echo "selected";}  ?> >A-</option>
                                         <option <?php if($gp=='B+'){echo "selected";}  ?>>B+</option>
@@ -336,7 +399,46 @@ else
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
+                                    <select id="gender" class="form-control" placeholder="Gender" type="select" required  name="gender">
+                                        <option disabled selected value="">Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input id="age" class="form-control" placeholder="Age" type="number" min=18 max="45" requireds name="age">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input id="nid" class="form-control" placeholder="NID Number" type="text" requireds name="nid">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select id="divisions" class="form-control" placeholder="Select Division" type="select" required  name="divisions" onchange="divisionsList();">
+                                        <option disabled selected>Select Division</option>
+                                        <option value="Barishal">Barishal</option>
+                                        <option value="Chattogram">Chattogram</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select id="district" class="form-control" placeholder="Select District" type="select" required  name="district" onchange="thanaList();"></select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <select id="thana" class="form-control" placeholder="Select Thana" type="select" required  name="thana"></select>
+                                </div>
+                                <!-- <div class="form-group col-md-6">
                                     <input id="place" class="form-control" placeholder="*Place" type="text" required name="place">
+                                </div> -->
+                                <p style="padding-bottom:10px;">Give Login Informetion</p>
+                                <div class="form-group col-md-6">
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="E-mail" required>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" name="password" minlength="8" required>
                                 </div>
 
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
