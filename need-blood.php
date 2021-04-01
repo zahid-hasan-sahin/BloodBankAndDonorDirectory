@@ -158,7 +158,7 @@
                         else if(diviList == 'Dhaka') {
                             var disctList = '<option disabled selected>Select District</option><option value="Dhaka">Dhaka</option><option value="Faridpur">Faridpur</option><option value="Gazipur">Gazipur</option><option value="Gopalganj">Gopalganj</option><option value="Kishoreganj">Kishoreganj</option><option value="Madaripur">Madaripur</option><option value="Manikganj">Manikganj</option><option value="Munshiganj">Munshiganj</option><option value="Narayanganj">Narayanganj</option><option value="Narsingdi">Narsingdi</option><option value="Rajbari">Rajbari</option><option value="Shariatpur">Shariatpur</option><option value="Tangail">Tangail</option>';
                         }
-                        // // set Khulna division districts
+                        // set Khulna division districts
                         else if(diviList == 'Khulna') {
                             var disctList = '<option disabled selected>Select District</option><option value="Bagerhat">Bagerhat</option><option value="Chuadanga">Chuadanga</option><option value="Jessore">Jessore</option><option value="Jinaidaha">Jinaidaha</option><option value="Khulna">Khulna</option><option value="Magura">Magura</option><option value="Meherpur">Meherpur</option><option value="Narail">Narail</option><option value="Satkhira">Satkhira</option>';
                         }
@@ -272,7 +272,7 @@
                                 </div>
                                <div class="form-group col-md-12 col-md-2">
                                     <select id="gp" class="form-control" placeholder="Blood Group" type="select" required  name="gp" >
-                                        <option value="">Blood Group</option>
+                                        <option disabled selected value="">Blood Group</option>
                                         <option>A+</option>
                                         <option>A-</option>
                                         <option>B+</option>
@@ -285,7 +285,7 @@
                                 </div>
                                 <div class="form-group col-md-12 col-md-2">
                                     <select id="divisions" class="form-control" placeholder="Select Division" type="select" required  name="divisions" onchange="divisionsList();">
-                                        <option selected>Select Division</option>
+                                        <option disabled selected>Select Division</option>
                                         <option value="Barishal">Barishal</option>
                                         <option value="Chattogram">Chattogram</option>
                                         <option value="Dhaka">Dhaka</option>
