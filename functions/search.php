@@ -12,15 +12,15 @@ $db =  mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 $searchTerm = $_GET['term'];
 
 // Get matched data from skills table
-$query = mysqli_query($db,"SELECT * FROM blood_bank WHERE place LIKE '%".$searchTerm."%' ORDER BY place ASC");
+$query = mysqli_query($db,"SELECT * FROM blood_bank WHERE thana LIKE '%".$searchTerm."%' AND disrict LIKE '%".$searchTerm."%' ORDER BY age ASC");
 
 // Generate skills data array
 $skillData = array();
 if(mysqli_affected_rows($db)>0){
     while($row = mysqli_fetch_array($query)){
-    		if(in_array($row['place'], $skillData))
+    		if(in_array($row['thana'], $skillData))
     				continue;
- array_push($skillData,$row['place']);
+ array_push($skillData,$row['thana']);
     }
 }
 
