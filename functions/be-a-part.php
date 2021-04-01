@@ -2,11 +2,19 @@
 		include_once('db.php');
 		$conn=db();
 		$result=array();
-		$name=strtolower($_POST['name']);
+		$f_name=strtolower($_POST['first_name']);
+		$l_name=strtolower($_POST['last_name']);
 		$phno=strtolower($_POST['phno']);
 		$gp=strtolower($_POST['gp']);
-		$place=strtolower($_POST['place']);
-		$submit=mysqli_query($conn,"SELECT* from blood_bank where gp='$gp' AND phno='$phno'");
+		$gender=strtolower($_POST['gender']);
+		$age=strtolower($_POST['age']);
+		$nid=strtolower($_POST['nid']);
+		$division=strtolower($_POST['divisions']);
+		$district=strtolower($_POST['district']);
+		$thana=strtolower($_POST['thana']);
+		$email=strtolower($_POST['email']);
+		$password=strtolower($_POST['password']);
+		$submit=mysqli_query($conn,"SELECT* from donor_info where gp='$gp' AND phno='$phno' AND nid='$nid'");
 		$chk=mysqli_affected_rows($conn);
 		sleep(2);
 
@@ -22,7 +30,8 @@
 				$result['msg']="<strong>Warning !</strong> You are already registered";
 			}
 			else{
-			$submit=mysqli_query($conn,"INSERT INTO `blood_bank` (`id`, `name`, `phno`, `gp`, `place`) VALUES (NULL, '$name', '$phno', '$gp', '$place');");
+			$submit=mysqli_query($conn,"INSERT INTO `donor_info` (`donor_id`, `first_name`, `last_name`, `nid`, `phno`, `gp`, `age`, `gender`, `divisions`, `district`, `thana`) VALUES (NULL, '$f_name','$l_name','$nid','$phno','$gp','$age','$gender','$division','$district','$thana');");
+			$submit=mysqli_query($conn,"INSERT INTO `login_info` (`user_id`, `email`, `password`,`donor_id`, `created_at`) VALUES (NULL, '$email','$password',(select donor_id from donor_info where nid = '$nid'),NULL);");
 			if($submit==1){
 				$result['class']="alert alert-success";
 				$result['status']="sucess";
