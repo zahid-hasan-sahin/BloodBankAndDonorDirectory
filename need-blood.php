@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 
 
-    <body> 
+    <body onload="divisionsList();  thanaList();"> 
 
         <div id="preloader">
             <span class="margin-bottom"><img src="images/loader.gif" alt="" /></span>
@@ -140,12 +140,53 @@
 
                 </div>
                <center>
+                <script>
+                    // Division Section select
+                    function divisionsList() {
+                        // get value from division lists
+                        var diviList = document.getElementById('divisions').value;
+
+                        // set barishal division districts
+                        if(diviList == 'Barishal'){		
+                            var disctList = '<option disabled selected>Select District</option><option value="Barguna">Barguna</option><option value="Barishal">Barishal</option><option value="Bhola">Bhola</option><option value="Jhalokati">Jhalokati</option><option value="Patuakhali">Patuakhali</option><option value="Pirojpur">Pirojpur</option>';
+                        }
+                        // set Chattogram division districts
+                        else if(diviList == 'Chattogram') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Bandarban">Bandarban</option><option value="Chandpur">Chandpur</option><option value="Chattogram">Chattogram</option><option value="Cumilla">Cumilla</option><option value="Cox\'s Bazar">Cox\'s Bazar</option><option value="Feni">Feni</option><option value="Khagrachhari">Khagrachhari</option><option value="Noakhali">Noakhali</option><option value="Rangamati">Rangamati</option>';	
+                        }
+                        // set Dhaka division districts
+                        else if(diviList == 'Dhaka') {
+                            var disctList = '<option disabled selected>Select District</option><option value="Dhaka">Dhaka</option><option value="Faridpur">Faridpur</option><option value="Gazipur">Gazipur</option><option value="Gopalganj">Gopalganj</option><option value="Kishoreganj">Kishoreganj</option><option value="Madaripur">Madaripur</option><option value="Manikganj">Manikganj</option><option value="Munshiganj">Munshiganj</option><option value="Narayanganj">Narayanganj</option><option value="Narsingdi">Narsingdi</option><option value="Rajbari">Rajbari</option><option value="Shariatpur">Shariatpur</option><option value="Tangail">Tangail</option>';
+                        }
+                        else if(diviList == 'Select Division') {
+                            var disctList = '<option value="" disabled selected>Select District</option>';
+                        }
+                        //  set/send districts name to District lists from division
+                        document.getElementById("district").innerHTML= disctList;
+                    }
+
+                    // Thana Section select
+                    function thanaList(){
+                        var DisList = document.getElementById('district').value;
+                        if(DisList == 'Barguna') {
+                            var thanaList = '<option disabled selected>Select Thana</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
+                        }
+                        else if(DisList == 'Bhola') {
+                            var thanaList = '<option disabled selected>Select Thana</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
+                        }
+                        else if(DisList == "") {
+                            var thanaList = '<option disabled selected>Select Thana</option>';
+                        }
+                        document.getElementById("thana").innerHTML= thanaList;
+                    }
+                </script>
+
                  <form class="appoinment-form" id ="send" action="" >
                                 <div class="form-group col-md-12 col-md-1">
                                 </div>
-                               <div class="form-group col-md-12 col-md-4">
+                               <div class="form-group col-md-12 col-md-2">
                                     <select id="gp" class="form-control" placeholder="Blood Group" type="select" required  name="gp" >
-                                        <option value="">Select Blood Group</option>
+                                        <option value="">Blood Group</option>
                                         <option>A+</option>
                                         <option>A-</option>
                                         <option>B+</option>
@@ -156,9 +197,28 @@
                                         <option>AB-</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-md-12 col-md-4">
-                                    <input id="place" class="form-control" placeholder="Place" type="text"  name="place" width="15%">
+                                <div class="form-group col-md-12 col-md-2">
+                                    <select id="divisions" class="form-control" placeholder="Select Division" type="select" required  name="divisions" onchange="divisionsList();">
+                                        <option selected>Select Division</option>
+                                        <option value="Barishal">Barishal</option>
+                                        <option value="Chattogram">Chattogram</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Mymensingh">Mymensingh</option>
+                                        <option value="Rajshahi">Rajshahi</option>
+                                        <option value="Rangpur">Rangpur</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                    </select>
                                 </div>
+                                <div class="form-group col-md-12 col-md-2">
+                                    <select id="district" class="form-control" placeholder="Select District" type="select" required  name="district" onchange="thanaList();"></select>
+                                </div>
+                                <div class="form-group col-md-12 col-md-2">
+                                    <select id="thana" class="form-control" placeholder="Select Thana" type="select" required  name="thana"></select>
+                                </div>
+                                <!-- <div class="form-group col-md-12 col-md-4">
+                                    <input id="place" class="form-control" placeholder="Place" type="text"  name="place" width="15%">
+                                </div> -->
                                
                                 <div class="form-group col-md-12 col-md-1">
                                     <button  class="btn-submit" type="submit" id="but">search </button>
@@ -360,7 +420,7 @@
   
 <script>
 $(function() {
-    $("#place").autocomplete({
+    $("#thana").autocomplete({
         source: "functions/search.php",
     });
 });
@@ -415,11 +475,11 @@ $(function() {
                             
                         },
                         error: function(){
-                            /*$("#but").html("SUBMIT");
-                            $("#but").removeAttr("disabled","disabled");
-                            $(".appoinment-form .btn-submit").css("background-color", "#FE3C47");
-                            $(".appoinment-form .btn-submit").css("border", "2px solid #FE3C47");
-                            $("#al").html("<div class='alert alert-danger'> <strong>Error!</strong> Oops something went wrong-(#A629)</div>");*/
+                            // $("#but").html("SUBMIT");
+                            // $("#but").removeAttr("disabled","disabled");
+                            // $(".appoinment-form .btn-submit").css("background-color", "#FE3C47");
+                            // $(".appoinment-form .btn-submit").css("border", "2px solid #FE3C47");
+                            // $("#al").html("<div class='alert alert-danger'> <strong>Error!</strong> Oops something went wrong-(#A629)</div>");
                         }
                     });
                     
