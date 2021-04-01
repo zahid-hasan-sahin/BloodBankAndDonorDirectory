@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(0);
 
  ?>
 <!DOCTYPE html>
@@ -131,7 +131,8 @@
 if(!(isset($_GET['gp'])))
 {
 ?>
-    <section class="section-content-block section-process">
+<section class="section-content-block section-process">
+
                 <div class="row">
 
                     <div class="col-md-12 col-sm-12 text-center">
@@ -224,7 +225,7 @@ if(!(isset($_GET['gp'])))
 
                     </div> <!--  end .col-lg-3  -->
                 </a>
-                <a href="be-a-part?gp=7'">
+                <a href="be-a-part?gp=7">
                      <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 
                         <div class="counter-block-1 text-center">
@@ -305,8 +306,9 @@ else
                         <div class="appointment-form-wrapper text-center clearfix">
                             <h3 class="join-heading">Registration</h3>
                             <p style="padding-bottom:10px;">Give Your Informetion</p>
-                        <div id="al">
-                        </div>
+                            <div id="al">
+                            
+                            </div>
                     <script>
                         document.addEventListener("DOMContentLoaded", function() {
                             divisionsList();
