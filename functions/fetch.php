@@ -4,6 +4,7 @@ $conn=db();
 $gp=strtolower($_POST['gp']);
 $place=strtolower($_POST['thana']);
 $distr=strtolower($_POST['district']);
+$hide= 1;
 sleep(2);
 		$result=array();
 		$result["details"]=("<table class='table table-bordered table-hover' width='100%'>
@@ -28,13 +29,14 @@ sleep(2);
  		{ 
  			if((($place==null)||($place==" ")||( preg_match('/\s/',$place))))
  			{
- 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp'");
+ 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and hide_data = '1'");
  			}
  			else
  			{
  				$place=$_POST['thana'];
 				$distr=$_POST['district'];
- 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr'");
+				$hide= 1;
+ 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '$hide'");
  			}
  			$i=1;
  			 $coun=mysqli_affected_rows($conn);

@@ -1,3 +1,15 @@
+<?php
+error_reporting(0);
+// Initialize the session
+session_start();
+include_once('functions/db.php');
+$conn=db();
+// Include config file
+require_once "functions/db.php";
+$donorID = $_SESSION["donor_id"];
+$qry = mysqli_query($conn,"SELECT first_name FROM donor_info WHERE donor_id = '$donorID'");
+$userdata = mysqli_fetch_array($qry);
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -82,13 +94,13 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="drop"><a href="index" title="Home Layout 01">Home</a></li>
-                                <li><a href="need-blood" title="Donors">Donors</a></li>
+                                <li class="drop"><a href="index" title="Home">Home</a></li>
+                                <li><a href="need-blood" title="Need Blood">Need Blood</a></li>
                                 <li><a href="be-a-part" title="BE A PART">BE A PART</a></li>
                                 <li><a href="about-bdd" title="About BDD">About BDD</a></li>
                                 <li><a href="about-us" title="About Us">About Us</a></li>
                                 <li><a href="contact" title="Contact">Contact</a></li>
-                                <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="Login">Login</a></li>
+                                <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="<?php if ($donorID == null) {echo "LOGIN";} else {echo ucfirst($userdata['first_name'])."'s Dashboard";} ?>"><?php if ($donorID == null) {echo "LOGIN";} else {echo ucfirst($userdata['first_name']);} ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -109,11 +121,11 @@
                     <div class="col-sm-12 text-center">
 
                         <h3>
-                            DONORS
+                        Need Blood
                         </h3>
 
                         <p class="page-breadcrumb">
-                            <a href="#">Home</a> / DONORS
+                            <a href="#">Home</a> / Need Blood
                         </p>
 
 

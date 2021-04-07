@@ -1,12 +1,25 @@
+<?php
+error_reporting(0);
+// Initialize the session
+session_start();
+include_once('functions/db.php');
+$conn=db();
+// Include config file
+require_once "functions/db.php";
+$donorID = $_SESSION["donor_id"];
+$qry = mysqli_query($conn,"SELECT first_name FROM donor_info WHERE donor_id = '$donorID'");
+$userdata = mysqli_fetch_array($qry);
+?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 
     <head>
+     
         <meta charset="utf-8">
-        <title>404 - SPC-IKTHSS CHERUKULAMBA BLOOD DONORS DIRECTORY</title>
+        <title> Home | Blood Donors Directory</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Student Police Cadet Of IKTHSS Cherukulamba Has Stepped Into The Society By Introducing A Blood Doners Directory In Order To Innovate Every Individual's Participation In These Kind Of Social Activities">
+        <meta name="description" content="Blood Donation - Activism & Campaign HTML5 Template">
         <meta name="author" content="xenioushk">
         <link rel="shortcut icon" href="images/favicon.png" />
 
@@ -31,7 +44,7 @@
 
         <!--  HEADER -->
 
-       <header class="main-header clearfix" data-sticky_header="true">
+        <header class="main-header clearfix" data-sticky_header="true">
 
             <div class="top-bar clearfix">
 
@@ -39,23 +52,22 @@
 
                     <div class="row">
 
-                        <div class="col-md-4 col-sm-8">
+                        <div class="col-md-4 col-sm-12">
 
-                            <p>Welcome to blood bank directory. </p>
+                            <p>Welcome To Blood Donors Directory </p>
 
                         </div>
 
-                            <div class="col-md-4 col-sm-4">
-                                    <center>
-                            <p><a href="need-blood"><blink>Need Blood ?</blink></a></p>
-                                </center>
+                        <div class="col-md-4 col-sm-12">
+                            <center>
+                                <p><a href="need-blood"><blink>Need Blood ?</blink></a></p>
+                            </center>
                         </div>
                         <div class="col-md-4col-sm-12">
                             <div class="top-bar-social">
-                                <a href="https://facebook.com/IKTEDUCity"><i class="fa fa-facebook"></i></a>
-                                <a href="mailto:ikthssckb@gmail.com" target="_top"><i class="fa fa-envelope "></i></a>
-                               
-                                <a href="https://www.youtube.com/channel/UCic8owPLTcWF2Cue4XN5A7g/videos"><i class="fa fa-youtube"></i></a>
+                                <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
                             </div>   
                         </div> 
 
@@ -67,7 +79,7 @@
 
             <section class="header-wrapper navgiation-wrapper">
 
-                <div class="navbar navbar-default">         
+                <div class="navbar navbar-default">			
                     <div class="container">
 
                         <div class="navbar-header">
@@ -81,21 +93,13 @@
 
                         <div class="navbar-collapse collapse">
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="drop">
-                                    <li class="drop"><a href="index" title="Home Layout 01">Home</a></li>
-                                <li><a href="need-blood" title="Donors">Donors</a></li>
+                                <li class="drop"><a href="index" title="Home">Home</a></li>
+                                <li><a href="need-blood" title="Need Blood">Need Blood</a></li>
                                 <li><a href="be-a-part" title="BE A PART">BE A PART</a></li>
-                                <li><a href="about-spc" title="About Spc">About Spc</a></li>
+                                <li><a href="about-bdd" title="About BDD">About BDD</a></li>
                                 <li><a href="about-us" title="About Us">About Us</a></li>
-
-
-
-                               
-
-                                
-
-
-                                <li><a href="contact">Contact</a></li>
+                                <li><a href="contact" title="Contact">Contact</a></li>
+                                <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="<?php if ($donorID == null) {echo "LOGIN";} else {echo ucfirst($userdata['first_name'])."'s Dashboard";} ?>"><?php if ($donorID == null) {echo "LOGIN";} else {echo ucfirst($userdata['first_name']);} ?></a></li>
                             </ul>
                         </div>
                     </div>
@@ -150,22 +154,6 @@
                             Sorry but we couldn't find the page you are looking for. Please check to make sure you've typed the URL correctly.
                         </p> <!-- end 404-message-text  -->
 
-                        <div class="search-form-404">
-                            <form action="index" id="search-form" class="search-form" method="get">
-
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                                    <input type="text" class="form-control" placeholder="Search....">
-                                </div>
-
-                                <input type="hidden" value="submit" />
-
-                            </form> <!-- end #search-form  -->
-                        </div> <!-- end .search-form-404  -->
-
-
-
-
                     </div> <!--  end col-sm-12  -->
 
                 </div> <!-- end row  -->
@@ -175,7 +163,8 @@
         </section> <!-- end .main-content  -->
 
         <!-- START FOOTER  -->
- <footer>            
+
+        <footer>            
 
             <section class="footer-widget-area footer-widget-area-bg">
 
@@ -195,7 +184,7 @@
 
                                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                                         <p>
-                                            Student Police Cadet Of IKTHSS Cherukulamba Has Stepped Into The Society By Introducing A Blood Doners Directory In Order To Innovate Every Individual's Participation In These Kind Of Social Activities....
+                                            Student of DIU Has Stepped Into The Society By Introducing A Blood Doners Directory In Order To Innovate Every Individual's Participation In These Kind Of Social Activities.
                                         </p>
                                     </div> <!--  end .col-lg-9  -->
 
@@ -218,13 +207,13 @@
                                     </div>
                                     <p></p>
                                     <div class="footer-subscription">
-                                      <li><a href=""><img src="images/ikthss.jpg" height="45%" width="45%"></a></li>
+                                      <li><a href=""><img src="images/diu.png" height="45%" width="45%"></a></li>
                                        
                                     </div>
                                 </div>
                             </div>
 
-                        </div> <!--  end .col-md-4 col-sm-12 -->                                              
+                        </div> <!--  end .col-md-4 col-sm-12 -->   						                      
 
                         <div class="col-md-4 col-sm-6 col-xs-12">
 
@@ -239,11 +228,11 @@
 
                                     <div class="textwidget">                                       
 
-                                       <i class="fa fa-envelope-o fa-contact"></i> <p><a href="mail:ikthssckb@gmail.com">ikthssckb@gmail.com</a></p>
+                                       <i class="fa fa-envelope-o fa-contact"></i> <p><a href="mailto:bdd.diu@gmail.com">bdd.diu@gmail.com</a></p>
 
-                                        <i class="fa fa-location-arrow fa-contact"></i> <p>Student Police Cadet<br/>Ikthss Cherukulamba<br> Vattalur(PO)-676507 <br> Malappuram</p>
+                                        <i class="fa fa-location-arrow fa-contact"></i> <p>102/1, Sukrabad Mirpur Rd <br>Dhanmondi, Dhaka 1207, Bangladesh</p>
 
-                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  04933 242 039                           
+                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  +880 1714 940 700                           
 
                                     </div>
 
@@ -263,32 +252,18 @@
                                         <h3>Support Links</h3>
                                     </div>  <!--  end .footer-widget-header --> 
 
-
                                     <ul class="footer-useful-links">
 
-                                        <li>
-                                            <a href="https://facebook.com/IKTEDUCity">
-                                                <i class="fa fa-caret-right fa-footer"></i>
-                                                IKT Educity
-                                            </a>
-                                        </li>
-
-                                        <li>
-                                            <a href="https://www.youtube.com/channel/UCic8owPLTcWF2Cue4XN5A7g/videos">
-                                                <i class="fa fa-caret-right fa-footer"></i>
-                                                IKT VISION
-                                            </a>
-                                        </li>
-                                             <li>
-                                            <a href="http://studentpolicecadet.org/">
-                                                <i class="fa fa-caret-right fa-footer"></i>
-                                                Student Police Cadet
-                                            </a>
-                                        </li>
                                         <li>
                                             <a href="about-us">
                                                 <i class="fa fa-caret-right fa-footer"></i>
                                                 About Us
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://daffodilvarsity.edu.bd">
+                                                <i class="fa fa-caret-right fa-footer"></i>
+                                                DIU Website
                                             </a>
                                         </li>
                                         <li>
@@ -298,24 +273,12 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://techzia.in">
+                                            <a href="https://nabilnewaz.com">
                                                 <i class="fa fa-caret-right fa-footer"></i>
-                                                Techzia
+                                                Developer Website
                                             </a>
-                                        </li>
-
-                                       
-
-                                       
-
-                                        
-
-                                       
-
-                                       
-
-                                                                             
-
+                                        </li> 
+                                   
                                     </ul>
 
                                 </div> <!--  end .footer-widget  -->        
@@ -340,7 +303,7 @@
                              <center>
                         <div >
                            
-                            <p > Copyright © Ikthss Blood Donares Directory <?php echo date('Y');?>. All rights reserved - By <a href='https://techzia.in'>Techzia </a> </p>
+                            <p > Copyright © Blood Donares Directory <?php echo date('Y');?>. All rights reserved</p>
 
                         </div>  <!-- end .col-sm-6  -->
                         </center>
@@ -356,7 +319,6 @@
         </footer>
 
         <!-- END FOOTER  -->
-
 
         <!-- Back To Top Button  -->
 
