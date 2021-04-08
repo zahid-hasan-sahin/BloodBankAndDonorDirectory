@@ -272,6 +272,9 @@ $userdata = mysqli_fetch_array($qry);
                         else if(DisList == 'Moulvibazar') {
                             var thanaList = '<option disabled selected>Select Thana</option><option value="Sreemangal">Sreemangal</option><option value="Rajnagar">Rajnagar</option><option value="Moulvibazar Sadar">Moulvibazar Sadar</option>';
                         }
+                        else if(DisList == 'Bogura') {
+                            var thanaList = '<option disabled selected>Select Thana</option><option value="Adamdighi">Adamdighi</option><option value="Bogra Sadar">Bogra Sadar</option><option value="Sherpur">Sherpur</option><option value="Dhunat">Dhunat</option><option value="Dhupchanchia">Dhupchanchia</option><option value="Gabtali">Gabtali</option><option value="Kahaloo">Kahaloo</option><option value="Nandigram">Nandigram</option><option value="Shajahanpur">Shajahanpur</option><option value="Sariakandi">Sariakandi</option><option value="Shibganj">Shibganj</option><option value="Sonatala">Sonatala</option>';
+                        }
                         else if(DisList == "") {
                             var thanaList = '<option disabled selected>Select Thana</option>';
                         }
