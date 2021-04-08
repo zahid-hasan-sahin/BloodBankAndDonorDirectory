@@ -12,7 +12,7 @@ $db =  mysqli_connect($dbHost, $dbUsername, $dbPassword, $dbName);
 $searchTerm = $_GET['term'];
 
 // Get matched data from skills table
-$query = mysqli_query($db,"SELECT * FROM blood_bank WHERE thana LIKE '%".$searchTerm."%' AND disrict LIKE '%".$searchTerm."%' AND hide_data = 1 ORDER BY age ASC");
+$query = mysqli_query($db,"SELECT * FROM blood_bank WHERE thana LIKE '%".$searchTerm."%' AND disrict LIKE '%".$searchTerm."%' ORDER BY age ASC");
 
 // Generate skills data array
 $skillData = array();
