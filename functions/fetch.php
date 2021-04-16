@@ -34,7 +34,7 @@ sleep(2);
  			{
  				$place=$_POST['thana'];
 				$distr=$_POST['district'];
- 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr'");
+ 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '1'");
  			}
  			$i=1;
  			 $coun=mysqli_affected_rows($conn);
