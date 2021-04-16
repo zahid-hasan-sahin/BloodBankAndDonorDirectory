@@ -15,7 +15,7 @@
 		$email=strtolower($_POST['email']);
 		$password=strtolower($_POST['password']);
 		$param_password = password_hash($password, PASSWORD_DEFAULT);
-		$submit=mysqli_query($conn,"SELECT* from donor_info where gp='$gp' AND phno='$phno' AND nid='$nid'");
+		$submit=mysqli_query($conn,"SELECT* from donor_info INNER JOIN login_info on donor_info.donor_id=login_info.donor_id where phno='$phno' OR nid='$nid' OR email='$email'");
 		$chk=mysqli_affected_rows($conn);
 		sleep(2);
 
@@ -28,7 +28,7 @@
 			if($chk!=0){
 				$result['class']="alert alert-warning";
 				$result['status']="ALRDREG";
-				$result['msg']="<strong>Warning !</strong> You are already registered";
+				$result['msg']="<strong>Warning !</strong> You are already registered. Try with another informetion";
 			}
 			else{
 			$submit=mysqli_query($conn,"INSERT INTO `donor_info` (`donor_id`, `first_name`, `last_name`, `nid`, `phno`, `gp`, `age`, `gender`, `divisions`, `district`, `thana`) VALUES (NULL, '$f_name','$l_name','$nid','$phno','$gp','$age','$gender','$division','$district','$thana');");
@@ -36,7 +36,7 @@
 			if($submit==1){
 				$result['class']="alert alert-success";
 				$result['status']="sucess";
-				$result['msg']="<strong>Success!</strong> Thank you for your support";
+				$result['msg']="<strong>Successfully Registered!</strong> Thank you for your support";
 			}
 			else
 			{
