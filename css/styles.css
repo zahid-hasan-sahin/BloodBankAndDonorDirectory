@@ -154,8 +154,6 @@ td {
 textarea {
   overflow: auto;
 }
-/* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css ; */
 input[type="radio"] {
   vertical-align: text-bottom;
 }
@@ -168,7 +166,6 @@ input[type="checkbox"] {
 .ie6 input {
   vertical-align: text-bottom;
 }
-/* Webkit browsers add a 2px margin outside the chrome of form elements */
 button,
 input,
 select,
@@ -176,7 +173,7 @@ textarea {
   margin: 0;
 }
 /***********************************************************************************************/
-/* 01. GENERAL STYLING  */
+/* GENERAL STYLING  */
 /***********************************************************************************************/
 body {
   font: 18px/28px 'Source Sans Pro', sans-serif;
@@ -804,7 +801,7 @@ a.btn-load-more:hover {
 /*------------------------------ Gallery Caption  ---------------------------------*/
 /*------------------------------ By Post Author ---------------------------------*/
 /***********************************************************************************************/
-/* 02. HEADER */
+/* HEADER */
 /***********************************************************************************************/
 .main-header {
   height: auto;
@@ -933,7 +930,7 @@ a.btn-load-more:hover {
   transition: 0.2s 0.2s ease-out;
 }
 /***********************************************************************************************/
-/* 03. MAIN NAVIGATION MENU */
+/* MAIN NAVIGATION MENU */
 /***********************************************************************************************/
 a.logo {
   margin-top: 10px;
@@ -1052,7 +1049,7 @@ header.one-page .navbar-nav > li > a span {
   top: 66px;
 }
 /***********************************************************************************************/
-/* 04. HOME PAGE */
+/* HOME PAGE */
 /***********************************************************************************************/
 .section-content-block {
   padding: 100px 0 100px 0;
@@ -2377,7 +2374,7 @@ header.one-page .navbar-nav > li > a span {
   margin: 48px 0;
 }
 /***********************************************************************************************/
-/* 05. BLOG LAYOUT */
+/* BLOG LAYOUT */
 /***********************************************************************************************/
 .page-header {
   margin: 0;
@@ -2474,7 +2471,7 @@ header.one-page .navbar-nav > li > a span {
   padding: 6px 12px;
 }
 /***********************************************************************************************/
-/* 06. BLOG SINGLE PAGE */
+/* BLOG SINGLE PAGE */
 /***********************************************************************************************/
 .single-post-inner {
   background: #F9FAFB;
@@ -2985,7 +2982,7 @@ ul.pagination li:last-child {
   border-bottom: 1px solid #a1a1a1;
 }
 /***********************************************************************************************/
-/* 07. EVENTS/CAMPAIGN PAGE */
+/* EVENTS/CAMPAIGN PAGE */
 /***********************************************************************************************/
 .event-search-box {
   margin-bottom: 48px;
@@ -3113,7 +3110,7 @@ ul.pagination li:last-child {
   padding: 12px 0px;
 }
 /***********************************************************************************************/
-/* 07. ABOUT US PAGE */
+/* ABOUT US PAGE */
 /***********************************************************************************************/
 .about-us-header {
   background-image: url("../images/our_mission_bg.jpg");
@@ -3679,7 +3676,7 @@ ul.pagination li:last-child {
   text-transform: uppercase;
 }
 /***********************************************************************************************/
-/* 09. GALLERY PAGE */
+/* GALLERY PAGE */
 /***********************************************************************************************/
 .section-gallery-block-parallax {
   background-attachment: scroll;
@@ -3815,7 +3812,7 @@ ul.pagination li:last-child {
   opacity: 1;
 }
 /***********************************************************************************************/
-/* 10. SERVICE PAGE */
+/* SERVICE PAGE */
 /***********************************************************************************************/
 .service-header {
   background-image: url("../images/home_1_banner.jpg");
@@ -3906,7 +3903,7 @@ ul.pagination li:last-child {
   content: '';
 }
 /***********************************************************************************************/
-/* 11. 404 PAGE */
+/* 404 PAGE */
 /***********************************************************************************************/
 .section-404 {
   background: #F9FAFB;
@@ -3937,7 +3934,7 @@ ul.pagination li:last-child {
   text-align: center;
 }
 /***********************************************************************************************/
-/* 12. FOOTER */
+/* FOOTER */
 /***********************************************************************************************/
 footer {
   position: relative;
@@ -4115,7 +4112,7 @@ footer p {
   background: #FFFFFF;
 }
 /***********************************************************************************************/
-/* 13. SIDEBAR & WIDGETS */
+/* SIDEBAR & WIDGETS */
 /***********************************************************************************************/
 .widget {
   background: #F9FAFB;
@@ -4356,7 +4353,7 @@ footer p {
   font-weight: bold;
 }
 /***********************************************************************************************/
-/* 14. RESPONSIVE STYLING */
+/* RESPONSIVE STYLING */
 /***********************************************************************************************/
 @media only screen and (min-width: 992px) and (max-width: 1300px) {
   #slider_1 {
@@ -5152,8 +5149,6 @@ footer p {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
-
 .counter12 {
   display: block;
   margin-top: 0px;
@@ -5189,11 +5184,6 @@ footer p {
     }
 }
 
-img[src="https://cdn.rawgit.com/000webhost/logo/e9bd13f7/footer-powered-by-000webhost-white2.png"]{
-display:none;
-
 
 }
-
-/*serach form
 
