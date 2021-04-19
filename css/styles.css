@@ -1,38 +1,4 @@
-/**
- * File: styles.css
- * Description : Contains all necessary styling for the Blood Donation - Activism & Campaign HTML5 Template
- * Author: xenioushk
- * URL: https://themeforest.net/user/xenioushk
- * Project: Blood Donation - Activism & Campaign HTML5 Template
- * Version: 1.0.1
- * Last Update: 21-11-2017
- **/
-/*========================================================================*/
-/*   TABLE OF CONTENT
-/*========================================================================*/
-/*
-/*      01. GENERAL STYLING
-/*      02. HEADER
-/*      03. MAIN NAVIGATION MENU
-/*      04. HOME PAGE
-/*      05. BLOG LAYOUT
-/*      06. BLOG SINGLE PAGE
-/*      07. EVENTS/CAMPAIGN PAGE
-/*      08. ABOUT US PAGE
-/*      09. GALLERY PAGE
-/*      10. SERVICE PAGE
-/*      11. 404 PAGE
-/*      12. FOOTER
-/*      13. SIDEBAR & WIDGETS
-/*      14. RESPONSIVE STYLING
-/*
-/*========================================================================*/
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,500,600|Source+Sans+Pro:400,600,700');
-/**
- * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
- * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
- * html5doctor.com/html-5-reset-stylesheet/
- */
 html,
 body,
 div,
