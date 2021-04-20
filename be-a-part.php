@@ -356,7 +356,7 @@ else
                                     <input id="age" class="form-control" placeholder="Age" type="number" min=18 max="45" requireds name="age">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input id="nid" class="form-control" placeholder="NID Number" type="text" requireds name="nid">
+                                    <input id="nid" class="form-control" placeholder="NID / Birth Reg. Number" type="text" requireds name="nid">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <select id="divisions" class="form-control" placeholder="Select Division" type="select" required  name="divisions" onchange="divisionsList();">
