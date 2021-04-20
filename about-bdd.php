@@ -164,7 +164,7 @@ $userdata = mysqli_fetch_array($qry);
                             </div>
                             <div id="collapseOne" class="panel-collapse collapse">
                                 <div class="panel-body">
-                                The Blood Donor Directory(BDD) Project is a city based  youth development initiatives that is supportive for the patients who need blood at time o emergency. The project also enable youth to develop a helpful mentality and grow up capabilities to help others. Equally, it strengthens within them commitment towards their family, the community, and the environment.
+                                The Blood Donor Directory(BDD) Project is a city based  youth development initiatives that is supportive for the patients who need blood at time of emergency. The project also enable youth to develop a helpful mentality and grow up capabilities to help others. Equally, it strengthens within them commitment towards their family, the community, and the environment.
                                 </div>
                             </div>
                         </div>
