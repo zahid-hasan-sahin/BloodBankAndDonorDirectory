@@ -211,7 +211,7 @@ $userdata = mysqli_fetch_array($qry);
 
                             <h2 class="contact-title">Say hello to us</h2>
 
-                            <form role="form" action="#" method="post" id="contact-form">
+                            <form role="form" action="https://formspree.io/f/xeqvorgn" method="post" id="contact-form">
 
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name" data-msg="Please Write Your Name" />
