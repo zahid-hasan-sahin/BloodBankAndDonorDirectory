@@ -9,6 +9,8 @@ require_once "functions/db.php";
 $donorID = $_SESSION["donor_id"];
 $qry = mysqli_query($conn,"SELECT first_name FROM donor_info WHERE donor_id = '$donorID'");
 $userdata = mysqli_fetch_array($qry);
+$smile_donor = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(donor_id) AS Count_do FROM donor_info"));
+$smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS Count_re FROM recipient_info"));
 ?>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -144,8 +146,8 @@ $userdata = mysqli_fetch_array($qry);
                 <div class="row section-heading-wrapper">
 
                     <div class="col-md-12 col-sm-12 text-center">
-                        <h2 class="section-heading">Our Volunteers</h2>
-                        <p class="section-subheading">The volunteers who give their time and talents help to fulfill our mission.</p>
+                        <h2 class="section-heading">Our Team</h2>
+                        <p class="section-subheading">The volunteers and developers who give their time and talents help to fulfill our mission.</p>
                     </div> <!-- end .col-sm-10  -->                      
 
                 </div> <!-- end .row  -->
@@ -157,24 +159,24 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
-                                <a href="#" title="ALEXANDER GARY">
-                                  <!--  <img src="images/team_9.jpg" alt="ALEXANDER GARY"/> -->
+                                <a href="#" title="Nabil Newaz">
+                                   <img src="images/team_1.jpg" alt="Nabil Newaz"/>
                                 </a>
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Name 1</h3>                                   
-                                <h4>....</h4>
+                                <h3>Nabil Newaz</h3>                                   
                             </article>
 
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
                                     <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
-                                    <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
+                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/Nabil_Newaz" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/nabilnewaz/" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/NabilNewaz" title="GitHub"></a>
+                                    <a class="fa fa-globe rectangle" href="https://nabilnewaz.com" title="Website"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -188,24 +190,23 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
-                                <a href="#" title="MELISSA MUNOZ">
-                                   <!-- <img src="images/team_6.jpg" alt="MELISSA MUNOZ" /> -->
+                                <a href="#" title="Rahat Islam">
+                                   <img src="images/team_2.jpg" alt="Rahat Islam" />
                                 </a>
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Name 2</h3>                                   
-                                <h4>....</h4>
+                                <h3>Rahat Islam</h3>                                   
                             </article>
 
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/profile.php?id=100009244487992" title="Facebook"></a>
                                     <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
-                                    <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/sk-rahat-islam-0997491a0/" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/SK-Rahat-Islam" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -219,23 +220,118 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
-                                <a href="#" title="JOHN ABRAHAM">
-                                  <!--  <img src="images/team_7.jpg" alt="JOHN ABRAHAM" /> -->
+                                <a href="#" title="Mashraba Mahjabin Peulee">
+                                   <img src="images/team_3.jpg" alt="Mashraba Mahjabin Peulee" />
                                 </a>                               
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Name 3</h3>                                   
-                                <h4>....</h4>
+                                <h3>Mashraba Mahjabin Peulee</h3>                                   
                             </article>
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/profile.php?id=100029510993567" title="Facebook"></a>
                                     <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-google-plus rectangle" href="#" title="Google Plus"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/mashraba-m-5319311b3/" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/MashrabaMahjabinPeulee" title="GitHub"></a>
+                                </div> <!-- end .author-social-box  -->
+
+                            </div>                             
+
+                        </div> <!--  end team-layout-1 -->
+
+                    </div> <!--  end .col-md-4 col-sm-12  -->  
+
+
+                </div> <!-- end .row  --> 
+
+                </br>
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+                        <div class="team-layout-1">       
+
+                            <figure class="team-member">
+                                <a href="#" title="Shimul Islam">
+                                   <img src="images/team_4.jpg" alt="Shimul Islam"/>
+                                </a>
+
+                            </figure> <!-- end. team-member  -->
+
+                            <article class="team-info">
+                                <h3>Shimul Islam</h3>                                   
+                            </article>
+
+                            <div class="team-content">
+
+                                <div class="team-social-share text-center clearfix">
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/shimulislam.shimul.58" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
                                     <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/Shimulislam95" title="GitHub"></a>
+                                </div> <!-- end .author-social-box  -->
+
+                            </div>                             
+
+                        </div> <!--  end team-layout-1 -->
+
+                    </div> <!--  end .col-md-4 col-sm-12  -->
+
+                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+                        <div class="team-layout-1">       
+
+                            <figure class="team-member">
+                                <a href="#" title="Regone Hossain">
+                                   <img src="images/team_5.jpg" alt="Regone Hossain" />
+                                </a>
+
+                            </figure> <!-- end. team-member  -->
+
+                            <article class="team-info">
+                                <h3>Regone Hossain</h3>                                   
+                            </article>
+
+                            <div class="team-content">
+
+                                <div class="team-social-share text-center clearfix">
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/abuj.mon.359" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/regone-hossain-noyon-b9835a196/" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://www.linkedin.com/in/regone-hossain-noyon-b9835a196/" title="GitHub"></a>
+                                </div> <!-- end .author-social-box  -->
+
+                            </div>                             
+
+                        </div> <!--  end team layout-1 -->
+
+                    </div> <!--  end .col-md-4 col-sm-12  -->
+
+                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+
+                        <div class="team-layout-1">       
+
+                            <figure class="team-member">
+                                <a href="#" title="Labony Akter">
+                                   <img src="images/team_6.jpg" alt="Labony Akter" />
+                                </a>                               
+
+                            </figure> <!-- end. team-member  -->
+
+                            <article class="team-info">
+                                <h3>Labony Akter</h3>                                   
+                            </article>
+                            <div class="team-content">
+
+                                <div class="team-social-share text-center clearfix">
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/nilakasher.nabila" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="#" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -266,7 +362,7 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-heartbeat icon"></i>
-                            <span class="counter">2578</span>                            
+                            <span class="counter"><?php echo $smile_donor['Count_do'] + $smile_recipient['Count_re']; ?></span>                            
                             <h4>Success Smile</h4>
 
                         </div>
@@ -278,7 +374,7 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-stethoscope icon"></i>
-                            <span class="counter">3235</span>                            
+                            <span class="counter"><?php echo $smile_donor['Count_do']; ?></span>                            
                             <h4>Happy Donors</h4>
 
                         </div>
@@ -290,7 +386,7 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-users icon"></i>
-                            <span class="counter">3568</span>                             
+                            <span class="counter"><?php echo $smile_recipient['Count_re']; ?></span>                             
                             <h4>Happy Recipient</h4>
 
                         </div>
@@ -302,7 +398,7 @@ $userdata = mysqli_fetch_array($qry);
                         <div class="counter-block-1 text-center">
 
                             <i class="fa fa-building icon"></i>
-                            <span class="counter">1364</span>                            
+                            <span class="counter">2</span>                            
                             <h4>Total Awards</h4>
 
                         </div>
