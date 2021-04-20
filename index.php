@@ -17,11 +17,19 @@ $userdata = mysqli_fetch_array($qry);
     <head>
      
         <meta charset="utf-8">
-        <title> Home | Blood Donors Directory</title>
+        <title>Blood Donors Directory</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <meta name="description" content="Blood Donation - Activism & Campaign HTML5 Template">
+        <meta name="description" content="Donate Your Blood & Save Life. The Blood Donor Directory(BDD) Project is a city based youth development initiatives that is supportive for the patients who need blood at time of emergency.">
         <meta name="author" content="xenioushk">
         <link rel="shortcut icon" href="images/favicon.png" />
+
+        <!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://blooddonorsbd.ml">
+		<meta property="og:title" content="Blood Donors Directory">
+		<meta property="og:description" content="Donate Your Blood & Save Life. The Blood Donor Directory(BDD) Project is a city based youth development initiatives that is supportive for the patients who need blood at time of emergency.">
+		<meta property="og:image" content="images/metaimg.jpg">
+		<meta property="fb:app_id" content="3095171203923902"/>
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -220,7 +228,7 @@ $userdata = mysqli_fetch_array($qry);
                                 <a href="be-a-part">
                             <article class="process-info">
                                 <h2>Registration</h2>   
-                                <p>Our Team Will Help You To Become A <br>Part Of This Social Directory. You Have To Provide Your Personal Information Regarding To This Activity.<br></p>
+                                <p>Our Team Will Help You To Become A Part Of This Social Directory. You Have To Provide Your Personal Information Regarding To This Activity.<br></p>
                             </article>
                                 </a>
                         </div> <!--  end .process-layout -->
