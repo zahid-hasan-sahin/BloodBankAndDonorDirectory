@@ -353,7 +353,7 @@ else
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input id="age" class="form-control" placeholder="Age" type="number" min=18 max="45" requireds name="age">
+                                    <input id="age" class="form-control" placeholder="Date Of Birth" type="date" requireds name="age">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <input id="nid" class="form-control" placeholder="NID / Birth Reg. Number" type="text" requireds name="nid">

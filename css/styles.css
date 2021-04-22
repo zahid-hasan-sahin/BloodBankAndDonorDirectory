@@ -259,6 +259,7 @@ li {
   list-style-type: none;
 }
 input[type=text],
+input[type=date],
 input[type=password],
 input[type=submit],
 input[type=button],
@@ -276,6 +277,7 @@ textarea {
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=submit]:focus,
+input[type=date]:focus,
 input[type=button]:focus,
 textarea:focus {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -1963,6 +1965,7 @@ header.one-page .navbar-nav > li > a span {
 .search-form select,
 .appoinment-form select,
 .appoinment-form input[type=number],
+.appoinment-form input[type=date],
 .appoinment-form input[type=text],
 .appoinment-form input[type=email],
 .appoinment-form input[type=url],
@@ -1991,6 +1994,7 @@ header.one-page .navbar-nav > li > a span {
 }
 .search-form input[type=text]:focus,
 .appoinment-form input[type=text]:focus,
+.appoinment-form input[type=date]:focus,
 .appoinment-form input[type=email]:focus,
 .appoinment-form input[type=url]:focus,
 .appoinment-form input[type=password]:focus {
@@ -2293,6 +2297,7 @@ header.one-page .navbar-nav > li > a span {
   padding: 0 0 0 0px;
 }
 .section-contact-block #contact-form input[type=text],
+.section-contact-block #contact-form input[type=date],
 .section-contact-block #contact-form input[type=email],
 .section-contact-block #contact-form input[type=url],
 .section-contact-block #contact-form input[type=password] {
@@ -2321,6 +2326,7 @@ header.one-page .navbar-nav > li > a span {
 }
 .section-contact-block #contact-form input[type=text]:focus,
 .section-contact-block #contact-form input[type=email]:focus,
+.section-contact-block #contact-form input[type=date]:focus,
 .section-contact-block #contact-form input[type=url]:focus,
 .section-contact-block #contact-form input[type=password]:focus {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);
@@ -2912,6 +2918,7 @@ ul.pagination li:last-child {
 }
 #comment-form input[type=text],
 #comment-form input[type=email],
+#comment-form input[type=date],
 #comment-form input[type=url],
 #comment-form input[type=password] {
   border: 0px;
@@ -2939,6 +2946,7 @@ ul.pagination li:last-child {
 }
 #comment-form input[type=text]:focus,
 #comment-form input[type=email]:focus,
+#comment-form input[type=date]:focus,
 #comment-form input[type=url]:focus,
 #comment-form input[type=password]:focus {
   -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.16);

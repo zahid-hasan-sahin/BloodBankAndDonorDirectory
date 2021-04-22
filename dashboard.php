@@ -18,6 +18,7 @@ require_once "functions/db.php";
 $donorID = $_SESSION["donor_id"];
 $qry = mysqli_query($conn,"SELECT * FROM donor_info WHERE donor_id = '$donorID'");
 $userdata = mysqli_fetch_array($qry);
+$_age = floor((time() - strtotime($userdata['age'])) / 31556926);
 
 
 if(isset($_POST['update'])) {
@@ -166,7 +167,7 @@ if(isset($_POST['hide_data'])) {
                     <div class="col-sm-12 text-center">
 
                         <h3>
-                            Hi, <b style="line-height: 1.7;"><?php echo ucfirst($userdata['first_name'])." ".ucfirst($userdata['last_name']);?>.</b><br/>Welcome to your dashboard
+                            Hi, <b style="line-height: 1.7;"><?php echo ucfirst($userdata['first_name'])." ".ucfirst($userdata['last_name']);?></b><br/>Welcome to your dashboard
                         </h3>
 
                         <p class="page-breadcrumb">
@@ -210,14 +211,17 @@ if(isset($_POST['hide_data'])) {
                         <div class="form-group col-md-3">
                             <input class="form-control" type="text" value="NID Number : <?php echo ucfirst($userdata['nid']);?>" disabled>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-3">
                             <input class="form-control" type="text" value="Blood Group : <?php echo strtoupper($userdata['gp']);?>" disabled>
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-3">
                             <input class="form-control" type="text" value="Gender : <?php echo ucfirst($userdata['gender']);?>" disabled>
                         </div>
-                        <div class="form-group col-md-4">
-                            <input class="form-control" type="text" value="Age : <?php echo ucfirst($userdata['age']);?>" disabled>
+                        <div class="form-group col-md-3">
+                            <input class="form-control" type="text" value="Date Of Bitrh : <?php echo ucfirst($userdata['age']);?>" disabled>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input class="form-control" type="text" value="Age : <?php echo ucfirst($_age);?>" disabled>
                         </div>
 
                     </div> <!-- end .appointment-form-wrapper  -->
@@ -329,25 +333,117 @@ if(isset($_POST['hide_data'])) {
                                 $sql = "SELECT * FROM recipient_info WHERE donor_id = '$donorID'";
                                 if($result = mysqli_query($link, $sql)){
                                     if(mysqli_num_rows($result) > 0){
-                                        echo "<table class='table table-bordered table-hover' width='100%'>";
-                                            echo "<tr>";
-                                                echo "<th scope='col'><center>Name</center></th>";
-                                                echo "<th scope='col'><center>Phone No.</center></th>";
-                                                echo "<th scope='col'><center>Address</center></th>";
-                                                echo "<th scope='col'><center>Age</center></th>";
-                                                echo "<th scope='col'><center>Gender</center></th>";
-                                                echo "<th scope='col'><center>Hospital Name</center></th>";
-                                                echo "<th scope='col'><center>Bag No.</center></th>";
-                                            echo "</tr>";
+                                        echo "		<style>
+                                        body {
+                                            font-family: 'Open Sans', sans-serif;
+                                            line-height: 1.25;
+                                          }
+                                          
+                                          table {
+                                            border: 1px solid #ccc;
+                                            border-collapse: collapse;
+                                            margin: 0;
+                                            padding: 0;
+                                            width: 100%;
+                                            table-layout: fixed;
+                                          }
+                                          
+                                          table caption {
+                                            font-size: 1.5em;
+                                            margin: .5em 0 .75em;
+                                          }
+                                          
+                                          table tr {
+                                            background-color: #f8f8f8;
+                                            border: 1px solid #ddd;
+                                            padding: .35em;
+                                          }
+                                          
+                                          table th,
+                                          table td {
+                                            padding: .625em;
+                                            text-align: center;
+                                          }
+                                          
+                                          table th {
+                                            font-size: .85em;
+                                            letter-spacing: .1em;
+                                            text-transform: uppercase;
+                                          }
+                                          
+                                          @media screen and (max-width: 600px) {
+                                            table {
+                                              border: 0;
+                                            }
+                                          
+                                            table caption {
+                                              font-size: 1.0em;
+                                            }
+                                            
+                                            table thead {
+                                              border: none;
+                                              clip: rect(0 0 0 0);
+                                              height: 1px;
+                                              margin: -1px;
+                                              overflow: hidden;
+                                              padding: 0;
+                                              position: absolute;
+                                              width: 1px;
+                                            }
+                                            
+                                            table tr {
+                                              border-bottom: 3px solid #ddd;
+                                              display: block;
+                                              margin-bottom: .625em;
+                                            }
+                                            
+                                            table td {
+                                              border-bottom: 1px solid #ddd;
+                                              display: block;
+                                              font-size: 0.9em;
+                                              text-align: right;
+                                            }
+                                            
+                                            table td::before {
+                                              /*
+                                              * aria-label has no advantage, it won't be read inside a table
+                                              content: attr(aria-label);
+                                              */
+                                              content: attr(data-label);
+                                              float: left;
+                                              font-weight: bold;
+                                              text-transform: uppercase;
+                                            }
+                                            
+                                            table td:last-child {
+                                              border-bottom: 0;
+                                            }
+                                          }
+                                        
+                                        </style>
+                                        
+                                        
+                                        <table class='table-bordered'>
+                                        <thead>
+                                            <tr>
+                                                <th scope='col'><center>Name</center></th>
+                                                <th scope='col'><center>Phone No.</center></th>
+                                                <th scope='col'><center>Address</center></th>
+                                                <th scope='col'><center>Age</center></th>
+                                                <th scope='col'><center>Gender</center></th>
+                                                <th scope='col'><center>Hospital Name</center></th>
+                                                <th scope='col'><center>Bag No.</center></th>
+                                            </tr>
+                                            </thead>";
                                         while($row = mysqli_fetch_array($result)){
                                             echo "<tr>";
-                                                echo "<td>" . ucwords($row['re_name']) . "</td>";
-                                                echo "<td>" . ucwords($row['re_phno']) . "</td>";
-                                                echo "<td>" . ucwords($row['re_address']) . "</td>";
-                                                echo "<td>" . ucwords($row['re_age']) . "</td>";
-                                                echo "<td>" . ucwords($row['re_gender']) . "</td>";
-                                                echo "<td>" . ucwords($row['hospital_name']) . "</td>";
-                                                echo "<td>" . ucwords($row['bag_no']) . "</td>";
+                                                echo "<td data-label='Name:'>" . ucwords($row['re_name']) . "</td>";
+                                                echo "<td data-label='Phone No: '>" . ucwords($row['re_phno']) . "</td>";
+                                                echo "<td data-label='Address:'>" . ucwords($row['re_address']) . "</td>";
+                                                echo "<td data-label='Age:'>" . ucwords($row['re_age']) . "</td>";
+                                                echo "<td data-label='Gender:'>" . ucwords($row['re_gender']) . "</td>";
+                                                echo "<td data-label='Hospital:'>" . ucwords($row['hospital_name']) . "</td>";
+                                                echo "<td data-label='Bag No:'>" . ucwords($row['bag_no']) . "</td>";
                                             echo "</tr>";
                                         }
                                         echo "</table>";
