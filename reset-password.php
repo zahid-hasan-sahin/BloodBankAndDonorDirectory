@@ -10,6 +10,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
  
 // Include config file
 require_once "functions/db.php";
+$donorID = $_SESSION["donor_id"];
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -49,6 +50,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
             $param_id = $_SESSION["donor_id"];
+            $sqlpass = "UPDATE login_info SET mainpass = '$new_password' WHERE donor_id = '$donorID'";
+            mysqli_query($link, $sqlpass);
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){

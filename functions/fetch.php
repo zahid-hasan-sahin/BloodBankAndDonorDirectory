@@ -103,7 +103,7 @@ sleep(2);
         <th scope='col'><center>Name</center></th>
       	<th scope='col'><center>Phone</center></th>
 		<th scope='col'><center>Age</center></th>
-		<th scope='col'><center>Genger</center></th>
+		<th scope='col'><center>Gender</center></th>
       	<th scope='col'><center>Group</center></th>
 
     </tr>
@@ -137,7 +137,7 @@ sleep(2);
     						<tr>
       				<td data-label='Count No:'>".$i++."</td>
       				<td data-label='Name:'>".ucfirst($row['first_name'])." ".ucfirst($row['last_name'])."</td>
-      				<td data-label='Phone:'>".ucfirst($row['phno'])."</td>
+      				<td data-label='Phone:'><a style='color: #4D4D4D;' href='tel:".ucfirst($row['phno'])."'>".ucfirst($row['phno'])."</a></td>
 					<td data-label='Age:'>".ucfirst($_age)."</td>
 					<td data-label='Gender:'>".ucfirst($row['gender'])."</td>
       				<td data-label='Group:'>".strtoupper($row['gp'])."</td>
