@@ -652,7 +652,7 @@ else
                         }
                         // set Chattogram division districts
                         else if(diviList == 'Chattogram') {
-                            var disctList = '<option disabled selected>Select District</option><option value="Bandarban">Bandarban</option><option value="Chandpur">Chandpur</option><option value="Chattogram">Chattogram</option><option value="Cumilla">Cumilla</option><option value="Cox\'s Bazar">Cox\'s Bazar</option><option value="Feni">Feni</option><option value="Khagrachhari">Khagrachhari</option><option value="Noakhali">Noakhali</option><option value="Rangamati">Rangamati</option>';	
+                            var disctList = '<option disabled selected>Select District</option><option value="Bandarban">Bandarban</option><option value="Brahmanbaria">Brahmanbaria</option><option value="Chandpur">Chandpur</option><option value="Chittagong">Chittagong</option><option value="Comilla">Comilla</option><option value="Cox`S Bazar">Cox`S Bazar</option><option value="Feni">Feni</option><option value="Khagrachhari">Khagrachhari</option><option value="Lakshmipur">Lakshmipur</option><option value="Noakhali">Noakhali</option><option value="Rangamati">Rangamati</option>';	
                         }
                         // set Dhaka division districts
                         else if(diviList == 'Dhaka') {
@@ -660,7 +660,7 @@ else
                         }
                         // set Khulna division districts
                         else if(diviList == 'Khulna') {
-                            var disctList = '<option disabled selected>Select District</option><option value="Bagerhat">Bagerhat</option><option value="Chuadanga">Chuadanga</option><option value="Jessore">Jessore</option><option value="Jinaidaha">Jinaidaha</option><option value="Khulna">Khulna</option><option value="Magura">Magura</option><option value="Meherpur">Meherpur</option><option value="Narail">Narail</option><option value="Satkhira">Satkhira</option>';
+                            var disctList = '<option disabled selected>Select District</option><option value="Bagerhat">Bagerhat</option><option value="Chuadanga">Chuadanga</option><option value="Jessore">Jessore</option><option value="Jinaidaha">Jinaidaha</option><option value="Khulna">Khulna</option><option value="Kushtia">Kushtia</option><option value="Magura">Magura</option><option value="Meherpur">Meherpur</option><option value="Narail">Narail</option><option value="Satkhira">Satkhira</option>';
                         }
                         // set Mymensingh division districts
                         else if(diviList == 'Mymensingh') {
@@ -689,82 +689,202 @@ else
                     function thanaList(){
                         var DisList = document.getElementById('district').value;
                         if(DisList == 'Barishal') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Agailjhara">Agailjhara</option><option value="Babuganj">Babuganj</option><option value="Bakerganj">Bakerganj</option><option value="Banaripara">Banaripara</option><option value="Barishal Sadar">Barisal Sadar</option><option value="Gournadi">Gournadi</option><option value="Hizla">Hizla</option><option value="Mehendiganj">Mehendiganj</option><option value="Muladi">Muladi</option><option value="Wazirpur">Wazirpur</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Agailjhara">Agailjhara</option><option value="Babuganj">Babuganj</option><option value="Bakerganj">Bakerganj</option><option value="Banaripara">Banaripara</option><option value="Barishal Sadar">Barisal Sadar</option><option value="Gournadi">Gournadi</option><option value="Hizla">Hizla</option><option value="Mehendiganj">Mehendiganj</option><option value="Muladi">Muladi</option><option value="Wazirpur">Wazirpur</option>';
                         }
                         else if(DisList == 'Barguna') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Amtali">Amtali</option><option value="Bamna">Bamna</option><option value="Barguna Sadar">Barguna Sadar</option><option value="Betagi">Betagi</option><option value="Patharghata">Patharghata</option><option value="Taltali">Taltali</option>';
                         }
                         else if(DisList == 'Bhola') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bhola Sadar">Bhola Sadar</option><option value="Daulatkhan">Daulatkhan</option><option value="Burhanuddin">Burhanuddin</option><option value="Tazumuddin">Tazumuddin</option><option value="Lalmohan">Lalmohan</option><option value="Char Fasson">Char Fasson</option><option value="Manpura">Manpura</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bhola Sadar">Bhola Sadar</option><option value="Daulatkhan">Daulatkhan</option><option value="Burhanuddin">Burhanuddin</option><option value="Tazumuddin">Tazumuddin</option><option value="Lalmohan">Lalmohan</option><option value="Char Fasson">Char Fasson</option><option value="Manpura">Manpura</option>';
                         }
                         else if(DisList == 'Jhalokati') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Jhalokati Sadar">Jhalokati Sadar</option><option value="Kathalia">Kathalia</option><option value="Nalchity">Nalchity</option><option value="Rajapur">Rajapur</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Jhalokati Sadar">Jhalokati Sadar</option><option value="Kathalia">Kathalia</option><option value="Nalchity">Nalchity</option><option value="Rajapur">Rajapur</option>';
                         }
                         else if(DisList == 'Patuakhali') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bauphal">Bauphal</option><option value="Galachipa">Galachipa</option><option value="Dashmina">Dashmina</option><option value="Kalapara">Kalapara</option><option value="Mirzaganj">Mirzaganj</option><option value="Patuakhali Sadar">Patuakhali Sadar</option><option value="Dumki">Dumki</option><option value="Rangabali">Rangabali</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bauphal">Bauphal</option><option value="Galachipa">Galachipa</option><option value="Dashmina">Dashmina</option><option value="Kalapara">Kalapara</option><option value="Mirzaganj">Mirzaganj</option><option value="Patuakhali Sadar">Patuakhali Sadar</option><option value="Dumki">Dumki</option><option value="Rangabali">Rangabali</option>';
                         }
                         else if(DisList == 'Pirojpur') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bhandaria">Bhandaria</option><option value="Kawkhali">Kawkhali</option><option value="Mathbaria">Mathbaria</option><option value="Nazirpur">Nazirpur</option><option value="Nesarabad">Nesarabad</option><option value="Pirojpur Sadar">Pirojpur Sadar</option><option value="Indurkani">Indurkani</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bhandaria">Bhandaria</option><option value="Kawkhali">Kawkhali</option><option value="Mathbaria">Mathbaria</option><option value="Nazirpur">Nazirpur</option><option value="Nesarabad">Nesarabad</option><option value="Pirojpur Sadar">Pirojpur Sadar</option><option value="Indurkani">Indurkani</option>';
                         }
                         else if(DisList == 'Chittagong') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Anwara">Anwara</option><option value="Banshkhali">Banshkhali</option><option value="Boalkhali">Boalkhali</option><option value="Chandanaish">Chandanaish</option><option value="Fatikchhari">Fatikchhari</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Akborsha">Akborsha</option><option value="Anwara">Anwara</option><option value="Bakalia">Bakalia</option><option value="Bandar">Bandar</option><option value="Banshkhali">Banshkhali</option><option value="Bayejid Bostami">Bayejid Bostami</option><option value="Boalkhali">Boalkhali</option><option value="Chandanaish">Chandanaish</option><option value="Chandgaon">Chandgaon</option><option value="Chittagong Metro">Chittagong Metro</option><option value="Chokbazar">Chokbazar</option><option value="Doublemooring">Doublemooring</option><option value="Epz">Epz</option><option value="Fatikchhari">Fatikchhari</option><option value="Halishahar">Halishahar</option><option value="Hathazari">Hathazari</option><option value="Karnafuli">Karnafuli</option><option value="Khulshi">Khulshi</option><option value="Kotwali">Kotwali</option><option value="Lohagara">Lohagara</option><option value="Mirsharai">Mirsharai</option><option value="Pahartali">Pahartali</option><option value="Panchlaish">Panchlaish</option><option value="Patenga">Patenga</option><option value="Patiya">Patiya</option><option value="Rangunia">Rangunia</option><option value="Raozan">Raozan</option><option value="Sandwip">Sandwip</option><option value="Satkania>Satkania</option><option value="Shodhorgat<">Shodhorgat</option><option value="Sitakunda">Sitakunda</option>';
+                        }
+                        else if(DisList == 'Bandarban') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bandarban Sadar">Bandarban Sadar</option><option value="Thanchi">Thanchi</option><option value="Lama">Lama</option><option value="Naikhongchhari">Naikhongchhari</option><option value="Ali kadam">Ali kadam</option><option value="Rowangchhari">Rowangchhari</option><option value="Ruma">Ruma</option>';
+                        }
+                        else if(DisList == 'Chandpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Chandpur Sadar">Chandpur Sadar</option><option value="Faridganj">Faridganj</option><option value="Haimchar">Haimchar</option><option value="Hajiganj">Hajiganj</option><option value="Kachua">Kachua</option><option value="Matlab Dakshin">Matlab Dakshin</option><option value="Matlab Uttar">Matlab Uttar</option><option value="Shahrasti">Shahrasti</option>';
+                        }
+                        else if(DisList == 'Brahmanbaria') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Akhaura">Akhaura</option><option value="Ashuganj">Ashuganj</option><option value="Bancharampur">Bancharampur</option><option value="Bijoynagar">Bijoynagar</option><option value="Brahmanbaria Sadar">Brahmanbaria Sadar</option><option value="Kasba">Kasba</option><option value="Nabinagar">Nabinagar</option><option value="Nasirnagar">Nasirnagar</option><option value="Sarail">Sarail</option>';
+                        }
+                        else if(DisList == 'Comilla') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Barura">Barura</option><option value="Brahmanpara">Brahmanpara</option><option value="Burichang">Burichang</option><option value="Chandina">Chandina</option><option value="Chauddagram">Chauddagram</option><option value="Comilla Sadar">Comilla Sadar</option><option value="Daudkandi">Daudkandi</option><option value="Debidwar">Debidwar</option><option value="Homna">Homna</option><option value="Laksam">Laksam</option><option value="Lalmai">Lalmai</option><option value="Manoharganj">Manoharganj</option><option value="Meghna">Meghna</option><option value="Muradnagar">Muradnagar</option><option value="Nangalkot">Nangalkot</option><option value="Sadar South">Sadar South</option><option value="Titas">Titas</option>';
+                        }
+                        else if(DisList == 'Cox`S Bazar') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Chakaria">Chakaria</option><option value="Cox`S Bazar Sadar">Cox`S Bazar Sadar</option><option value="Kutubdia">Kutubdia</option><option value="Maheshkhali">Maheshkhali</option><option value="Pekua">Pekua</option><option value="Ramu">Ramu</option><option value="Teknaf">Teknaf</option><option value="Ukhiya">Ukhiya</option>';
+                        }
+                        else if(DisList == 'Feni') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Chhagalnaiya">Chhagalnaiya</option><option value="Daganbhuiyan">Daganbhuiyan</option><option value="Feni Sadar">Feni Sadar</option><option value="Fulgazi">Fulgazi</option><option value="Parshuram">Parshuram</option><option value="Sonagazi">Sonagazi</option>';
+                        }
+                        else if(DisList == 'Khagrachhari') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Dighinala">Dighinala</option><option value="Guimara">Guimara</option><option value="Khagrachhari Sadar">Khagrachhari Sadar</option><option value="Laxmichhari">Laxmichhari</option><option value="Mahalchhari">Mahalchhari</option><option value="Manikchhari">Manikchhari</option><option value="Matiranga">Matiranga</option><option value="Panchari">Panchari</option><option value="Ramgarh">Ramgarh</option>';
+                        }
+                        else if(DisList == 'Lakshmipur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Kamalnagar">Kamalnagar</option><option value="Lakshmipur Sadar">Lakshmipur Sadar</option><option value="Raipur">Raipur</option><option value="Ramganj">Ramganj</option><option value="Ramgati">Ramgati</option>';
+                        }
+                        else if(DisList == 'Noakhali') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Begumganj">Begumganj</option><option value="Chatkhil">Chatkhil</option><option value="Companiganj">Companiganj</option><option value="Hatiya">Hatiya</option><option value="Kabirhat">Kabirhat</option><option value="Noakhali Sadar">Noakhali Sadar</option><option value="Senbagh">Senbagh</option><option value="Sonaimuri">Sonaimuri</option><option value="Subarnachar">Subarnachar</option>';
+                        }
+                        else if(DisList == 'Rangamati') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Baghaichari">Baghaichari</option><option value="Barkal">Barkal</option><option value="Bilaichari">Bilaichari</option><option value="Jurachhari">Jurachhari</option><option value="Kaptai">Kaptai</option><option value="Kowkhali">Kowkhali</option><option value="Langadu">Langadu</option><option value="Naniarchar">Naniarchar</option><option value="Rajasthali">Rajasthali</option><option value="Rangamati Sadar">Rangamati Sadar</option>';
                         }
                         else if(DisList == 'Dhaka') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Dhamrai">Dhamrai</option><option value="Dohar">Dohar</option><option value="Savar">Savar</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Adabor">Adabor</option><option value="Airport">Airport</option><option value="Asulia">Asulia</option><option value="Badda">Badda</option><option value="Banani">Banani</option><option value="Bangshal">Bangshal</option><option value="Bhashantek">Bhashantek</option><option value="Cantonment">Cantonment</option><option value="Chawkbazar">Chawkbazar</option><option value="Dakshin Khan">Dakshin Khan</option><option value="Darussalam<">Darussalam</option><option value="Demra">Demra</option><option value="Dhaka Metro">Dhaka Metro</option><option value="Dhamrai">Dhamrai</option><option value="Dhanmondi">Dhanmondi</option><option value="Dohar">Dohar</option><option value="Gandaria">Gandaria</option><option value="Gulshan">Gulshan</option><option value="Hazaribagh">Hazaribagh</option><option value="Jatrabari">Jatrabari</option><option value="Kadamtali">Kadamtali</option><option value="Kafrul">Kafrul</option><option value="Kalabagan">Kalabagan</option><option value="Kalyanpur">Kalyanpur</option><option value="Kamrangir Char">Kamrangir Char</option><option value="Keraniganj">Keraniganj</option><option value="Khilgaon">Khilgaon</option><option value="Khilkhet">Khilkhet</option><option value="Kotwali">Kotwali</option><option value="Lalbagh">Lalbagh</option><option value="Mirpur">Mirpur</option><option value="Mohammadpur">Mohammadpur</option><option value="Motijheel">Motijheel</option><option value="Mugda">Mugda</option><option value="Nawabganj">Nawabganj</option><option value="New Market">New Market</option><option value="Pallabi">Pallabi</option><option value="Paltan">Paltan</option><option value="Ramna">Ramna</option><option value="Rampura">Rampura</option><option value="Rupnagar">Rupnagar</option><option value="Sabujbagh">Sabujbagh</option><option value="Savar">Savar</option><option value="Shah Ali">Shah Ali</option><option value="Shahbag">Shahbag</option><option value="Shahjahanpur">Shahjahanpur</option><option value="Sher E Bangla Nagar">Sher E Bangla Nagar</option><option value="Shyampur">Shyampur</option><option value="Sutrapur">Sutrapur</option><option value="Tejgaon">Tejgaon</option><option value="Tejgaon Industrial Area">Tejgaon Industrial Area</option><option value="Turag">Turag</option><option value="Uttar Khan">Uttar Khan</option><option value="Uttara">Uttara</option><option value="Uttara West">Uttara West</option><option value="Vatara">Vatara</option><option value="Wari">Wari</option>';
+                        }
+                        else if(DisList == 'Faridpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Alfadanga">Alfadanga</option><option value="Bhanga">Bhanga</option><option value="Boalmari">Boalmari</option><option value="Charbhadrasan">Charbhadrasan</option><option value="Faridpur Sadar">Faridpur Sadar</option><option value="Madhukhali">Madhukhali</option><option value="Nagarkanda">Nagarkanda</option><option value="Sadarpur">Sadarpur</option><option value="Saltha">Saltha</option>';
                         }
                         else if(DisList == 'Gazipur') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Gazipur Sadar">Gazipur Sadar</option><option value="Kapasia">Kapasia</option><option value="Kaliganj">Kaliganj</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Gazipur Sadar">Gazipur Sadar</option><option value="Kaliakair">Kaliakair</option><option value="Kaliganj">Kaliganj</option><option value="Kapasia">Kapasia</option><option value="Sreepur">Sreepur</option><option value="Tongi">Tongi</option>';
+                        }
+                        else if(DisList == 'Gopalganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Gopalganj Sadar">Gopalganj Sadar</option><option value="Kashiani">Kashiani</option><option value="Kotalipara">Kotalipara</option><option value="Muksudpur">Muksudpur</option><option value="Tungipara">Tungipara</option>';
+                        }
+                        else if(DisList == 'Kishoreganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Austagram">Austagram</option><option value="Bajitpur">Bajitpur</option><option value="Bhairab">Bhairab</option><option value="Hossainpur">Hossainpur</option><option value="Itna">Itna</option><option value="Karimganj">Karimganj</option><option value="Katiadi">Katiadi</option><option value="Kishoreganj Sadar">Kishoreganj Sadar</option><option value="Kuliarchar">Kuliarchar</option><option value="Mithamoin">Mithamoin</option><option value="Nikli">Nikli</option><option value="Pakundia">Pakundia</option><option value="Tarail">Tarail</option>';
+                        }
+                        else if(DisList == 'Madaripur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Kalkini">Kalkini</option><option value="Madaripur Sadar">Madaripur Sadar</option><option value="Rajoir">Rajoir</option><option value="Shibchar">Shibchar</option>';
+                        }
+                        else if(DisList == 'Manikganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Daulatpur">Daulatpur</option><option value="Ghior">Ghior</option><option value="Harirampur">Harirampur</option><option value="Manikganj Sadar">Manikganj Sadar</option><option value="Saturia">Saturia</option><option value="Shibalaya">Shibalaya</option><option value="Singair">Singair</option>';
+                        }
+                        else if(DisList == 'Munshiganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Gazaria">Gazaria</option><option value="Louhajang">Louhajang</option><option value="Munshiganj Sadar">Munshiganj Sadar</option><option value="Sirajdikhan">Sirajdikhan</option><option value="Sreenagar">Sreenagar</option><option value="Tongibari">Tongibari</option>';
+                        }
+                        else if(DisList == 'Narayanganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Araihazar">Araihazar</option><option value="Bandar">Bandar</option><option value="Fatullah">Fatullah</option><option value="Narayanganj Sadar">Narayanganj Sadar</option><option value="Rupganj">Rupganj</option><option value="Sonargaon">Sonargaon</option>';
+                        }
+                        else if(DisList == 'Narsingdi') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Belabo">Belabo</option><option value="Monohardi">Monohardi</option><option value="Narsingdi Sadar">Narsingdi Sadar</option><option value="Palash">Palash</option><option value="Raipura">Raipura</option><option value="Shibpur">Shibpur</option>';
+                        }
+                        else if(DisList == 'Rajbari') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Baliakandi">Baliakandi</option><option value="Goalanda">Goalanda</option><option value="Kalukhali">Kalukhali</option><option value="Pangsha">Pangsha</option><option value="Rajbari Sadar">Rajbari Sadar</option>';
+                        }
+                        else if(DisList == 'Shariatpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bhaderganj">Bhaderganj</option><option value="Damudya">Damudya</option><option value="Gosairhat">Gosairhat</option><option value="Naria">Naria</option><option value="Palong">Palong</option><option value="Shariatpur Sadar">Shariatpur Sadar</option><option value="Zajira">Zajira</option>';
                         }
                         else if(DisList == 'Tangail') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Basail">Basail</option><option value="Madhupur">Madhupur</option><option value="Mirzapur">Mirzapur</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Basail">Basail</option><option value="Bhuapur">Bhuapur</option><option value="Delduar">Delduar</option><option value="Dhanbari">Dhanbari</option><option value="Ghatail">Ghatail</option><option value="Gopalpur>Gopalpur</option><option value="Kalihati">Kalihati</option><option value="Madhupur">Madhupur</option><option value="Mirzapur">Mirzapur</option><option value="Nagarpur">Nagarpur</option><option value="Sakhipur">Sakhipur</option><option value="Tangail Sadar">Tangail Sadar</option>>';
                         }
                         else if(DisList == 'Bagerhat') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bagerhat Sadar">Bagerhat Sadar</option><option value="Fakirhat">Fakirhat</option><option value="Rampal">Rampal</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bagerhat Sadar">Bagerhat Sadar</option><option value="Chitalmari">Chitalmari</option><option value="Fakirhat">Fakirhat</option><option value="Kachua">Kachua</option><option value="Mollahat">Mollahat</option><option value="Mongla">Mongla</option><option value="Morrelganj">Morrelganj</option><option value="Rampal">Rampal</option><option value="Sarankhola">Sarankhola</option>';
+                        }
+                        else if(DisList == 'Chuadanga') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Alamdanga">Alamdanga</option><option value="Chuadanga Sadar">Chuadanga Sadar</option><option value="Damurhuda">Damurhuda</option><option value="Jiban Nagar">Jiban Nagar</option>';
                         }
                         else if(DisList == 'Jessore') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Abhaynagar">Abhaynagar</option><option value="Jessore Sadar">Jessore Sadar</option><option value="Keshabpur">Keshabpur</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Abhaynagar">Abhaynagar</option><option value="Bagherpara">Bagherpara</option><option value="Chougachha">Chougachha</option><option value="Jessore Sadar">Jessore Sadar</option><option value="Jhikargachha">Jhikargachha</option><option value="Keshabpur">Keshabpur</option><option value="Manirampur">Manirampur</option><option value="Sharsha">Sharsha</option>';
+                        }
+                        else if(DisList == 'Jinaidaha') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Harinakunda">Harinakunda</option><option value="Jhenaidah Sadar">Jhenaidah Sadar</option><option value="Kaliganj">Kaliganj</option><option value="Kotchandpur">Kotchandpur</option><option value="Moheshpur">Moheshpur</option><option value="Shailkupa">Shailkupa</option>';
                         }
                         else if(DisList == 'Khulna') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Batiaghata">Batiaghata</option><option value="Khan Jahan Ali">Khan Jahan Ali</option><option value="Rupsa">Rupsa </option><option value="Sonadanga">Sonadanga</option><option value="Phultala">Phultala</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Aranghata">Aranghata</option><option value="Batiaghata">Batiaghata</option><option value="Dakop">Dakop</option><option value="Daulatpur">Daulatpur</option><option value="Dighulia">Dighulia</option><option value="Dumuria">Dumuria</option><option value="Fultala">Fultala</option><option value="Harintana">Harintana</option><option value="Kayra">Kayra</option><option value="Khalishpur">Khalishpur</option><option value="Khanjahan Ali">Khanjahan Ali</option><option value="Khulna Metro">Khulna Metro</option><option value="Khulna Sadar">Khulna Sadar</option><option value="Labanchora">Labanchora</option><option value="Paikgacha">Paikgacha</option><option value="Rupsha">Rupsha</option><option value="Sonadanga">Sonadanga</option><option value="Terakhada">Terakhada</option>';
+                        }
+                        else if(DisList == 'Kushtia') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bheramara">Bheramara</option><option value="Daulatpur">Daulatpur</option><option value="Khoksa">Khoksa</option><option value="Kumarkhali">Kumarkhali</option><option value="Kushtia Sadar">Kushtia Sadar</option><option value="Mirpur">Mirpur</option>';
+                        }
+                        else if(DisList == 'Magura') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Magura Sadar">Magura Sadar</option><option value="Mohammadpur">Mohammadpur</option><option value="Shalikha">Shalikha</option><option value="Sreepur">Sreepur</option>';
+                        }
+                        else if(DisList == 'Meherpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Gangni">Gangni</option><option value="Meherpur Sadar">Meherpur Sadar</option><option value="Mujibnagar">Mujibnagar</option>';
+                        }
+                        else if(DisList == 'Narail') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Kalia">Kalia</option><option value="Lohagara">Lohagara</option><option value="Narail Sadar">Narail Sadar</option>';
                         }
                         else if(DisList == 'Satkhira') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Satkhira Sadar">Satkhira Sadar</option><option value="Tala">Tala</option><option value="Kaliganj">Kaliganj</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Assasuni">Assasuni</option><option value="Debhata">Debhata</option><option value="Kalaroa">Kalaroa</option><option value="Kaliganj">Kaliganj</option><option value="Satkhira Sadar">Satkhira Sadar</option><option value="Shyamnagar">Shyamnagar</option><option value="Tala">Tala</option>';
                         }
                         else if(DisList == 'Mymensingh') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bhaluka">Bhaluka</option><option value="Fulbaria">Fulbaria</option><option value="Nandail">Nandail</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bhaluka">Bhaluka</option><option value="Dhobaura">Dhobaura</option><option value="Fulbaria">Fulbaria</option><option value="Fulpur">Fulpur</option><option value="Gaffargaon">Gaffargaon</option><option value="Gouripur">Gouripur</option><option value="Haluaghat">Haluaghat</option><option value="Iswarganj">Iswarganj</option><option value="Muktagachha">Muktagachha</option><option value="Mymensingh Sadar">Mymensingh Sadar</option><option value="Nandail">Nandail</option><option value="Tarakanda">Tarakanda</option><option value="Trishal">Trishal</option>';
                         }
                         else if(DisList == 'Jamalpur') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Dewanganj">Dewanganj</option><option value="Islampur">Islampur</option><option value="Jamalpur Sadar">Jamalpur Sadar</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bakshiganj">Bakshiganj</option><option value="Dewanganj">Dewanganj</option><option value="Islampur">Islampur</option><option value="Jamalpur Sadar">Jamalpur Sadar</option><option value="Madarganj">Madarganj</option><option value="Melandah">Melandah</option><option value="Sarishabari">Sarishabari</option>';
+                        }
+                        else if(DisList == 'Netrokona') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Atpara">Atpara</option><option value="Barhatta">Barhatta</option><option value="Durgapur">Durgapur</option><option value="Kalmakanda">Kalmakanda</option><option value="Kendua">Kendua</option><option value="Khaliajuri">Khaliajuri</option><option value="Madan">Madan</option><option value="Mohanganj">Mohanganj</option><option value="Netrokona Sadar">Netrokona Sadar</option><option value="Purbadhala">Purbadhala</option>';
+                        }
+                        else if(DisList == 'Sherpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Jhenaigati">Jhenaigati</option><option value="Nakla">Nakla</option><option value="Nalitabari">Nalitabari</option><option value="Sherpur Sadar">Sherpur Sadar</option><option value="Sreebordi">Sreebordi</option>';
                         }
                         else if(DisList == 'Rajshahi') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bagha">Bagha</option><option value="Bagmara">Bagmara</option><option value="Chandrima">Chandrima</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bagha">Bagha</option><option value="Baghmara">Baghmara</option><option value="Boalia">Boalia</option><option value="Charghat">Charghat</option><option value="Durgapur">Durgapur</option><option value="Godagari">Godagari</option><option value="Matihar">Matihar</option><option value="Mohanpur">Mohanpur</option><option value="Paba">Paba</option><option value="Puthia">Puthia</option><option value="Rajpara">Rajpara</option><option value="Rajshahi Metro">Rajshahi Metro</option><option value="Shah Makhdum">Shah Makhdum</option><option value="Tanore">Tanore</option>';
+                        }
+                        else if(DisList == 'Chapainawabganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bholahat">Bholahat</option><option value="Chapai Nawabganj Sadar">Chapai Nawabganj Sadar</option><option value="Gomastapur">Gomastapur</option><option value="Nachol">Nachol</option><option value="Shibganj">Shibganj</option>';
+                        }
+                        else if(DisList == 'Joypurhat') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Akkelpur">Akkelpur</option><option value="Joypurhat Sadar">Joypurhat Sadar</option><option value="Kalai">Kalai</option><option value="Khetlal">Khetlal</option><option value="Panchbibi">Panchbibi</option>';
+                        }
+                        else if(DisList == 'Naogaon') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Atrai">Atrai</option><option value="Badalgachhi">Badalgachhi</option><option value="Dhamoirhat">Dhamoirhat</option><option value="Manda">Manda</option><option value="Mohadebpur">Mohadebpur</option><option value="Naogaon Sadar">Naogaon Sadar</option><option value="Niamatpur">Niamatpur</option><option value="Patnitala">Patnitala</option><option value="Porsha">Porsha</option><option value="Raninagar">Raninagar</option><option value="Sapahar">Sapahar</option>';
                         }
                         else if(DisList == 'Natore') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Bagatipara">Bagatipara</option><option value="Natore Sadar">Natore Sadar</option><option value="Singra">Singra</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bagatipara">Bagatipara</option><option value="Baraigram">Baraigram</option><option value="Gurudaspur">Gurudaspur</option><option value="Lalpur">Lalpur</option><option value="Naldanga">Naldanga</option><option value="Natore Sadar">Natore Sadar</option><option value="Singra">Singra</option>';
                         }
-                        else if(DisList == 'Sirajganj') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Sirajganj Sadar">Sirajganj Sadar</option><option value="Ullahpara">Ullahpara</option><option value="Belkuchi">Belkuchi</option>';
-                        }
-                        else if(DisList == 'Rangpur') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Badarganj">Badarganj</option><option value="Gangachara">Gangachara</option><option value="Rangpur Sadar">Rangpur Sadar</option>';
-                        }
-                        else if(DisList == 'Nilphamari') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Saidpur">Saidpur</option><option value="Saidpur">Saidpur</option><option value="Nilphamari Sadar">Nilphamari Sadar</option>';
-                        }
-                        else if(DisList == 'Habiganj') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Ajmiriganj">Ajmiriganj</option><option value="Bahubal">Bahubal</option><option value="Habiganj Sadar">Habiganj Sadar</option>';
-                        }
-                        else if(DisList == 'Sylhet') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Balaganj">Balaganj</option><option value="Fenchuganj">Fenchuganj</option><option value="Sylhet Sadar">Sylhet Sadar</option>';
-                        }
-                        else if(DisList == 'Moulvibazar') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Sreemangal">Sreemangal</option><option value="Rajnagar">Rajnagar</option><option value="Moulvibazar Sadar">Moulvibazar Sadar</option>';
+                        else if(DisList == 'Pabna') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Atgharia">Atgharia</option><option value="Bera">Bera</option><option value="Bhangura">Bhangura</option><option value="Chatmohar">Chatmohar</option><option value="Faridpur">Faridpur</option><option value="Ishwardi">Ishwardi</option><option value="Pabna Sadar">Pabna Sadar</option><option value="Santhia">Santhia</option><option value="Sujanagar">Sujanagar</option>';
                         }
                         else if(DisList == 'Bogura') {
-                            var thanaList = '<option disabled selected>Select Thana</option><option value="Adamdighi">Adamdighi</option><option value="Bogra Sadar">Bogra Sadar</option><option value="Sherpur">Sherpur</option><option value="Dhunat">Dhunat</option><option value="Dhupchanchia">Dhupchanchia</option><option value="Gabtali">Gabtali</option><option value="Kahaloo">Kahaloo</option><option value="Nandigram">Nandigram</option><option value="Shajahanpur">Shajahanpur</option><option value="Sariakandi">Sariakandi</option><option value="Shibganj">Shibganj</option><option value="Sonatala">Sonatala</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Adamdighi">Adamdighi</option><option value="Bogra Sadar">Bogra Sadar</option><option value="Sherpur">Sherpur</option><option value="Dhunat">Dhunat</option><option value="Dhupchanchia">Dhupchanchia</option><option value="Gabtali">Gabtali</option><option value="Kahaloo">Kahaloo</option><option value="Nandigram">Nandigram</option><option value="Shajahanpur">Shajahanpur</option><option value="Sariakandi">Sariakandi</option><option value="Shibganj">Shibganj</option><option value="Sonatala">Sonatala</option>';
+                        }
+                        else if(DisList == 'Sirajganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Belkuchi">Belkuchi</option><option value="Chauhali">Chauhali</option><option value="Kamarkhanda">Kamarkhanda</option><option value="Kazipur">Kazipur</option><option value="Raiganj">Raiganj</option><option value="Shahjadpur">Shahjadpur</option><option value="Sirajganj Sadar">Sirajganj Sadar</option><option value="Tarash">Tarash</option><option value="Ullapara">Ullapara</option>';
+                        }
+                        else if(DisList == 'Rangpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Badarganj">Badarganj</option><option value="Gangachara">Gangachara</option><option value="Kaunia">Kaunia</option><option value="Mithapukur">Mithapukur</option><option value="Pirgacha">Pirgacha</option><option value="Pirganj">Pirganj</option><option value="Rangpur Sadar">Rangpur Sadar</option><option value="Taraganj">Taraganj</option>';
+                        }
+                        else if(DisList == 'Dinajpur') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Birampur">Birampur</option><option value="Birganj">Birganj</option><option value="Birol">Birol</option><option value="Bochaganj">Bochaganj</option><option value="Chirirbandar">Chirirbandar</option><option value="Dinajpur Sadar">Dinajpur Sadar</option><option value="Fulbari">Fulbari</option><option value="Ghoraghat">Ghoraghat</option><option value="Hakimpur">Hakimpur</option><option value="Kaharole">Kaharole</option><option value="Khansama">Khansama</option><option value="Nawabganj">Nawabganj</option><option value="Parbatipur">Parbatipur</option>';
+                        }
+                        else if(DisList == 'Gaibandha') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Fulchhari">Fulchhari</option><option value="Gaibandha Sadar">Gaibandha Sadar</option><option value="Gobindaganj">Gobindaganj</option><option value="Palashbari">Palashbari</option><option value="Sadullapur">Sadullapur</option><option value="Saghata">Saghata</option><option value="Sundarganj">Sundarganj</option>';
+                        }
+                        else if(DisList == 'Kurigram') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bhurungamari">Bhurungamari</option><option value="Char Rajibpur">Char Rajibpur</option><option value="Chilmari">Chilmari</option><option value="Fulbari">Fulbari</option><option value="Kurigram Sadar">Kurigram Sadar</option><option value="Nageshwari">Nageshwari</option><option value="Rajarhat">Rajarhat</option><option value="Rowmari">Rowmari</option><option value="Ulipur">Ulipur</option>';
+                        }
+                        else if(DisList == 'Lalmonirhat') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Aditmari">Aditmari</option><option value="Hatibandha">Hatibandha</option><option value="Kaliganj">Kaliganj</option><option value="Lalmonirhat Sadar">Lalmonirhat Sadar</option><option value="Patgram">Patgram</option>';
+                        }
+                        else if(DisList == 'Nilphamari') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Dimla">Dimla</option><option value="Domar">Domar</option><option value="Jaldhaka">Jaldhaka</option><option value="Kishoreganj">Kishoreganj</option><option value="Nilphamari Sadar">Nilphamari Sadar</option><option value="Saidpur">Saidpur</option>';
+                        }
+                        else if(DisList == 'Panchagarh') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Atwari">Atwari</option><option value="Boda">Boda</option><option value="Debiganj">Debiganj</option><option value="Panchagarh Sadar">Panchagarh Sadar</option><option value="Tetulia">Tetulia</option>';
+                        }
+                        else if(DisList == 'Thakurgaon') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Baliadangi">Baliadangi</option><option value="Haripur">Haripur</option><option value="Pirganj">Pirganj</option><option value="Ranisankail">Ranisankail</option><option value="Thakurgaon Sadar">Thakurgaon Sadar</option>';
+                        }
+                        else if(DisList == 'Habiganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Ajmiriganj">Ajmiriganj</option><option value="Bahubal">Bahubal</option><option value="Baniachong">Baniachong</option><option value="Chunarughat">Chunarughat</option><option value="Habiganj Sadar">Habiganj Sadar</option><option value="Lakhai">Lakhai</option><option value="Madhabpur">Madhabpur</option><option value="Nabiganj">Nabiganj</option><option value="Shaistaganj">Shaistaganj</option>';
+                        }
+                        else if(DisList == 'Sylhet') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Airport">Airport</option><option value="Balaganj">Balaganj</option><option value="Beanibazar">Beanibazar</option><option value="Bishwanath">Bishwanath</option><option value="Companiganj">Companiganj</option><option value="Fenchuganj">Fenchuganj</option><option value="Golapganj">Golapganj</option><option value="Gowainghat">Gowainghat</option><option value="Harzat Shah Paran">Harzat Shah Paran</option><option value="Jaintiapur">Jaintiapur</option><option value="Jalalabad">Jalalabad</option><option value="Kanaighat">Kanaighat</option><option value="Kowtali">Kowtali</option><option value="Moglabazar">Moglabazar</option><option value="Osmani Nagar">Osmani Nagar</option><option value="South Surma">South Surma</option><option value="Sylhet Sadar">Sylhet Sadar</option><option value="Zakiganj">Zakiganj</option>';
+                        }
+                        else if(DisList == 'Moulvibazar') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Barlekha">Barlekha</option><option value="Juri">Juri</option><option value="Kamalganj">Kamalganj</option><option value="Kulaura">Kulaura</option><option value="Maulvibazar Sadar">Maulvibazar Sadar</option><option value="Rajnagar">Rajnagar</option><option value="Sreemangal">Sreemangal</option>';
+                        }
+                        else if(DisList == 'Sunamganj') {
+                            var thanaList = '<option disabled selected>Select Upazila</option><option value="Bishwambarpur">Bishwambarpur</option><option value="Chhatak">Chhatak</option><option value="Derai">Derai</option><option value="Dharmapasha">Dharmapasha</option><option value="Dowarabazar">Dowarabazar</option><option value="Jagannathpur">Jagannathpur</option><option value="Jamalganj">Jamalganj</option><option value="Shalla">Shalla</option><option value="South Sunamganj">South Sunamganj</option><option value="Sunamganj Sadar">Sunamganj Sadar</option><option value="Tahirpur">Tahirpur</option>';
                         }
                         else if(DisList == "") {
-                            var thanaList = '<option disabled selected>Select Thana</option>';
+                            var thanaList = '<option disabled selected>Select Upazila</option>';
+                        }
+                        else if(DisList == "Select District") {
+                            var thanaList = '<option disabled selected>Select Upazila</option>';
                         }
                         document.getElementById("thana").innerHTML= thanaList;
                     }
