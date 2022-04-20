@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2021 at 08:54 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- Generation Time: Apr 20, 2022 at 10:03 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,14 +47,10 @@ CREATE TABLE `donor_info` (
 --
 
 INSERT INTO `donor_info` (`donor_id`, `first_name`, `last_name`, `nid`, `phno`, `gp`, `age`, `gender`, `divisions`, `district`, `thana`, `hide_data`) VALUES
-(1, 'nabil', 'newaz', '7354528189', '01714940700', 'b+', '1999-11-04', 'male', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1),
-(2, 'rahat', 'islam', '7334524189', '01715427898', 'b+', '0000-00-00', 'male', 'khulna', 'khulna', 'rupsa', 1),
-(3, 'regone', 'hossain', '7357935189', '01795552887', 'a+', '0000-00-00', 'male', 'khulna', 'satkhira', 'kaliganj', 1),
-(4, 'kjhsd', 'asdhiasud', '9567489761', '01710145646', 'b+', '0000-00-00', 'male', 'rajshahi', 'rajshahi', 'bagha', 1),
-(5, 'uyrtutyu', 'ytuytutyu', '9777487761', '01946789155', 'b+', '2015-01-22', 'male', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1),
-(6, 'uyrtutyu', 'dsafsdfsf', '9567589761', '01549784655', 'b+', '1999-11-04', 'female', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1),
-(7, 'uyrtutyu', 'uytuytuy', '9567799761', '04567895411', 'a-', '2014-10-15', 'female', 'khulna', 'bagerhat', 'bagerhat sadar', 1),
-(8, 'uyrtutyu', 'fdgfdgdf', '9567489734', '04567894511', 'a-', '2017-06-21', 'male', 'dhaka', 'dhaka', 'dohar', 1);
+(1, 'nabil', 'newaz', '7354528189', '01714940700', 'ab+', '1999-11-04', 'male', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1),
+(2, 'anika', 'tabassum', '2415229315', '01521491660', 'a+', '2000-01-31', 'female', 'rajshahi', 'bogura', 'bogra sadar', 1),
+(3, 'naimur', 'rahman', '7362041282', '01761009030', 'o+', '2000-12-30', 'male', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1),
+(4, 'asif hassan', 'sabbir', '9161764387', '01761483596', 'b+', '2001-07-14', 'male', 'rajshahi', 'sirajganj', 'sirajganj sadar', 1);
 
 -- --------------------------------------------------------
 
@@ -76,14 +72,10 @@ CREATE TABLE `login_info` (
 --
 
 INSERT INTO `login_info` (`user_id`, `email`, `password`, `donor_id`, `created_at`, `mainpass`) VALUES
-(1, 'nabilnewaz@gmail.com', '$2y$10$DpFHVW2e8z3SVBOe0WPQWeWWFGpLISmLf3UyfL2pFHiaqgMJqz9Gu', 1, NULL, ''),
-(2, 'skrahat@gmail.com', '$2y$10$xpolvv4O4gpxczLwpoAuGeiWLtY/OISP99ms7gs.D0r8NHD/SA8IK', 2, NULL, ''),
-(3, 'regone12345@gmail.com', '$2y$10$M2wRlK0WxPCBdOhoXMTsiO/JJig9z7PD/rBBaO8oul4WY07L9ZO/2', 3, NULL, ''),
-(4, 'm_hasan3209@yahoo.com', '$2y$10$WG1UM3f0Sx04wWkn7ORkYO3pgm8/aLCUJE8YG41ZGJFj3.sl9Cxxe', 4, NULL, ''),
-(5, 'newaz@gmail.com', '$2y$10$WVUmOmb5tT1UVH8SFnUIgepDOPrSNYGFyLhByVisMD/bfs6OXEeQG', 5, NULL, ''),
-(6, 'test@gmail.com', '$2y$10$/kbcjYbeUNXNvYkmClE/LOYOUiZLVctFIuJmZZ/06wiUpT0fS26fu', 6, NULL, 'testtest'),
-(7, 'testpass@gmail.com', '$2y$10$RqtLa8Ag16zevVPFaQ0qxuKeVmb3yANNimFhdcNYq.RCFLbkAn1Dm', 7, NULL, 'testpass'),
-(8, 'testtime@gmail.com', '$2y$10$rpkjakfxgy.ujvlSeK36oOCoQkssQEIOsEJ.lOivkCdLL7.idJQ2m', 8, '2021-04-22 11:35:54', 'testtime');
+(1, 'nabilnewaz@gmail.com', '$2y$10$0JUKG8nH978lkURaMb76GeH77RiUDP2W9l0jO81mH5JjbCse4H/li', 1, '2022-04-20 09:49:39', 'nabilnewaz123'),
+(2, 'nisamarium9@gmail.com', '$2y$10$x632nJtpFyWLWjsNVdR9IuMG8g1AFKQlMR3.NJhOeZdgpFDVxxmVO', 2, '2022-04-20 09:52:35', 'nisamarium9'),
+(3, 'naimurrahman9030@gmail.com', '$2y$10$kBDQjpgg3J9RMLnfsyRBm.MZYz7uAEH4bNRxdL1fS/5TXHGfrpLtu', 3, '2022-04-20 09:57:37', 'naimurrahman9030'),
+(4, 'asifhassansabbir@gmail.com', '$2y$10$HCUJLXpSkmMvqYMdt10yHuCHDE1pgFC9ClOOVqlMW8FESvoLiYq6C', 4, '2022-04-20 10:01:45', 'asifhassansabbir');
 
 -- --------------------------------------------------------
 
@@ -102,14 +94,6 @@ CREATE TABLE `recipient_info` (
   `bag_no` int(11) NOT NULL,
   `donor_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `recipient_info`
---
-
-INSERT INTO `recipient_info` (`re_id`, `re_name`, `re_phno`, `re_address`, `re_age`, `re_gender`, `hospital_name`, `bag_no`, `donor_id`) VALUES
-(1, 'Shimul Islam', '01717769796', 'rajshahi', 25, 'Male', 'Islami Bank Medical College Hospital Rajshahi', 1, 1),
-(2, 'Subel Islam', '01744100471', 'Sirajganj', 26, 'Male', 'Medinova Hospital Complex, sirajganj', 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -145,19 +129,19 @@ ALTER TABLE `recipient_info`
 -- AUTO_INCREMENT for table `donor_info`
 --
 ALTER TABLE `donor_info`
-  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `donor_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `login_info`
 --
 ALTER TABLE `login_info`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `recipient_info`
 --
 ALTER TABLE `recipient_info`
-  MODIFY `re_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `re_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
