@@ -214,18 +214,18 @@ $userdata = mysqli_fetch_array($qry);
                             <form role="form" action="https://formspree.io/f/xeqvorgn" method="post" id="contact-form">
 
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="user_name" name="user_name" placeholder="Name" data-msg="Please Write Your Name" />
+                                    <input type="text" class="form-control" id="user_name" name="user_name" required placeholder="Name" data-msg="Please Write Your Name" />
                                 </div>
 
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="user_email" name="user_email" placeholder="Email" data-msg="Please Write Your Valid Email" />
+                                    <input type="email" class="form-control" id="user_email" name="user_email" required placeholder="Email" data-msg="Please Write Your Valid Email" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="email_subject" name="email_subject" placeholder="Subject" data-msg="Please Write Your Message Subject" />
+                                    <input type="text" class="form-control" id="email_subject" name="email_subject" required placeholder="Subject" data-msg="Please Write Your Message Subject" />
                                 </div>
 
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="5" name="email_message" id="email_message" placeholder="Message" data-msg="Please Write Your Message" ></textarea>
+                                    <textarea class="form-control" rows="5" name="email_message" id="email_message" required placeholder="Message" data-msg="Please Write Your Message" ></textarea>
                                 </div>
 
                                 <div class="form-group">

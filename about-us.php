@@ -172,11 +172,11 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="#" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/Nabil_Newaz" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/nabilnewaz/" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/NabilNewaz" title="GitHub"></a>
-                                    <a class="fa fa-globe rectangle" href="https://nabilnewaz.com" title="Website"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://facebook.com/nabilnewaz.5" target="_blank" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/Nabil_Newaz" target="_blank" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/nabilnewaz/" target="_blank" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/NabilNewaz" target="_blank" title="GitHub"></a>
+                                    <a class="fa fa-globe rectangle" href="https://nabilnewaz.com" target="_blank" title="Website"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -184,58 +184,28 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         </div> <!--  end team-layout-1 -->
 
                     </div> <!--  end .col-md-4 col-sm-12  -->
-
-                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
-                        <div class="team-layout-1">       
-
-                            <figure class="team-member">
-                                <a href="#" title="Rahat Islam">
-                                   <img src="images/team_2.jpg" alt="Rahat Islam" />
-                                </a>
-
-                            </figure> <!-- end. team-member  -->
-
-                            <article class="team-info">
-                                <h3>Rahat Islam</h3>                                   
-                            </article>
-
-                            <div class="team-content">
-
-                                <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/profile.php?id=100009244487992" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/sk-rahat-islam-0997491a0/" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/SK-Rahat-Islam" title="GitHub"></a>
-                                </div> <!-- end .author-social-box  -->
-
-                            </div>                             
-
-                        </div> <!--  end team layout-1 -->
-
-                    </div> <!--  end .col-md-4 col-sm-12  -->
-
-                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+					
+					<div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
                                 <a href="#" title="Mashraba Mahjabin Peulee">
-                                   <img src="images/team_3.jpg" alt="Mashraba Mahjabin Peulee" />
+                                   <img src="images/team_2.jpg" alt="Anika Tabassum Marium" />
                                 </a>                               
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Mashraba Mahjabin Peulee</h3>                                   
+                                <h3>Anika Tabassum Marium</h3>                                   
                             </article>
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/profile.php?id=100029510993567" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/mashraba-m-5319311b3/" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/MashrabaMahjabinPeulee" title="GitHub"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/anikatabassum.marium" target="_blank" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/NisaMarium" target="_blank" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/anika-tabassum-marium-85a955213/" target="_blank" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/AnikaTabassumMarium" target="_blank" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -244,20 +214,13 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
 
                     </div> <!--  end .col-md-4 col-sm-12  -->  
 
-
-                </div> <!-- end .row  --> 
-
-                </br>
-
-                <div class="row">
-
                     <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
                                 <a href="#" title="Shimul Islam">
-                                   <img src="images/team_4.jpg" alt="Shimul Islam"/>
+                                   <img src="images/team_3.jpg" alt="Shimul Islam"/>
                                 </a>
 
                             </figure> <!-- end. team-member  -->
@@ -269,10 +232,10 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/shimulislam.shimul.58" title="Facebook"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/shimulislam.shimul.58" target="_blank" title="Facebook"></a>
                                     <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
                                     <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/Shimulislam95" title="GitHub"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/Shimulislam95" target="_blank" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -280,68 +243,10 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         </div> <!--  end team-layout-1 -->
 
                     </div> <!--  end .col-md-4 col-sm-12  -->
-
-                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
-                        <div class="team-layout-1">       
-
-                            <figure class="team-member">
-                                <a href="#" title="Regone Hossain">
-                                   <img src="images/team_5.jpg" alt="Regone Hossain" />
-                                </a>
-
-                            </figure> <!-- end. team-member  -->
-
-                            <article class="team-info">
-                                <h3>Regone Hossain</h3>                                   
-                            </article>
-
-                            <div class="team-content">
-
-                                <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/abuj.mon.359" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/regone-hossain-noyon-b9835a196/" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://www.linkedin.com/in/regone-hossain-noyon-b9835a196/" title="GitHub"></a>
-                                </div> <!-- end .author-social-box  -->
-
-                            </div>                             
-
-                        </div> <!--  end team layout-1 -->
-
-                    </div> <!--  end .col-md-4 col-sm-12  -->
-
-                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
-                        <div class="team-layout-1">       
-
-                            <figure class="team-member">
-                                <a href="#" title="Labony Akter">
-                                   <img src="images/team_6.jpg" alt="Labony Akter" />
-                                </a>                               
-
-                            </figure> <!-- end. team-member  -->
-
-                            <article class="team-info">
-                                <h3>Labony Akter</h3>                                   
-                            </article>
-                            <div class="team-content">
-
-                                <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/nilakasher.nabila" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="#" title="GitHub"></a>
-                                </div> <!-- end .author-social-box  -->
-
-                            </div>                             
-
-                        </div> <!--  end team-layout-1 -->
-
-                    </div> <!--  end .col-md-4 col-sm-12  -->  
-
 
                 </div> <!-- end .row  --> 
+
+                </br>
 
             </div> <!-- end .container  -->
 
