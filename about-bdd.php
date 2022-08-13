@@ -119,11 +119,11 @@ $userdata = mysqli_fetch_array($qry);
                     <div class="col-sm-12 text-center">
 
                         <h3>
-                            ABOUT SPC
+                            ABOUT BDD
                         </h3>
 
                         <p class="page-breadcrumb">
-                            <a href="#">Home</a> / ABOUT SPC
+                            <a href="#">Home</a> / ABOUT BDD
                         </p>
 
 
