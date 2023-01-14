@@ -14,7 +14,7 @@
 		$thana=strtolower($_POST['thana']);
 		$email=strtolower($_POST['email']);
 		$password=strtolower($_POST['password']);
-		$datetime=date("Y-m-d h:i:sa");
+		$datetime=date("Y-m-d h:i:s");
 		$param_password = password_hash($password, PASSWORD_DEFAULT);
 		$submit=mysqli_query($conn,"SELECT* from donor_info INNER JOIN login_info on donor_info.donor_id=login_info.donor_id where phno='$phno' OR nid='$nid' OR email='$email'");
 		$chk=mysqli_affected_rows($conn);

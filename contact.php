@@ -64,9 +64,9 @@ $userdata = mysqli_fetch_array($qry);
                         </div>
                         <div class="col-md-4col-sm-12">
                             <div class="top-bar-social">
-                                <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
-                                <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/strange.seyam.7" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:noman.seyam55555@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://wa.me/8801763980526"><i class="fa fa-whatsapp"></i></a>
                             </div>   
                         </div> 
 
@@ -165,7 +165,7 @@ $userdata = mysqli_fetch_array($qry);
 
                             <li>
                                 <span class="icon-container"><i class="fa fa-phone"></i></span>
-                                <address><a href="#">+880 1714 940 700</a></address>
+                                <address><a href="#">+880 1763980526</a></address>
                             </li>
 
                         </ul>                        
@@ -187,7 +187,7 @@ $userdata = mysqli_fetch_array($qry);
                         <ul class="contact-info">
                             <li>
                                 <span class="icon-container"><i class="fa fa-globe"></i></span>
-                                <address><a href="https://nabilnewaz.com" target="_blank">Developer Website</a></address>
+                                
                             </li>
                         </ul>                        
 
@@ -387,7 +387,7 @@ $userdata = mysqli_fetch_array($qry);
                              <center>
                         <div >
                            
-                            <p > Copyright © Blood Donares Directory <?php echo date('Y');?>. All rights reserved</p>
+                            <p > Copyright © Blood Donors Directory <?php echo date('Y');?>. All rights reserved</p>
 
                         </div>  <!-- end .col-sm-6  -->
                         </center>

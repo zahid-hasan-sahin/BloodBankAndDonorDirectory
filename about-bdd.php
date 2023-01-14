@@ -64,9 +64,9 @@ $userdata = mysqli_fetch_array($qry);
                         </div>
                         <div class="col-md-4col-sm-12">
                             <div class="top-bar-social">
-                                <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
-                                <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/strange.seyam.7" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:noman.seyam55555@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://wa.me/8801763980526"><i class="fa fa-whatsapp"></i></a>
                             </div>   
                         </div> 
 
@@ -304,7 +304,7 @@ $userdata = mysqli_fetch_array($qry);
 
                                         <i class="fa fa-location-arrow fa-contact"></i> <p>102/1, Sukrabad Mirpur Rd <br>Dhanmondi, Dhaka 1207, Bangladesh</p>
 
-                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  +880 1714 940 700                           
+                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  +880 1763980526                          
 
                                     </div>
 
@@ -344,12 +344,7 @@ $userdata = mysqli_fetch_array($qry);
                                                 Contact Us
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="https://nabilnewaz.com">
-                                                <i class="fa fa-caret-right fa-footer"></i>
-                                                Developer Website
-                                            </a>
-                                        </li> 
+                                         
                                    
                                     </ul>
 
@@ -375,7 +370,7 @@ $userdata = mysqli_fetch_array($qry);
                              <center>
                         <div >
                            
-                            <p > Copyright © Blood Donares Directory <?php echo date('Y');?>. All rights reserved</p>
+                            <p > Copyright © Blood Donors Directory <?php echo date('Y');?>. All rights reserved</p>
 
                         </div>  <!-- end .col-sm-6  -->
                         </center>

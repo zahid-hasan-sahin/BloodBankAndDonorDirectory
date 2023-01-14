@@ -66,9 +66,9 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         </div>
                         <div class="col-md-4col-sm-12">
                             <div class="top-bar-social">
-                                <a href="https://facebook.com/nabilnewaz.5" target="_blank"><i class="fa fa-facebook"></i></a>
-                                <a href="mailto:nabilnewaz@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
-                                <a href="https://wa.me/8801714940700"><i class="fa fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/strange.seyam.7" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="mailto:noman.seyam55555@gmail.com" target="_top"><i class="fa fa-envelope-o"></i></a>
+                                <a href="https://wa.me/8801763980526"><i class="fa fa-whatsapp"></i></a>
                             </div>   
                         </div> 
 
@@ -159,24 +159,22 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
-                                <a href="#" title="Nabil Newaz">
-                                   <img src="images/team_1.jpg" alt="Nabil Newaz"/>
+                                <a href="#" title="Md. Abdullah Al-Noman">
+                                   <img src="images/team_1.jpg" alt="Md.Abdullah Al-Noman"/>
                                 </a>
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Nabil Newaz</h3>                                   
+                                <h3>Md. Abdullah Al-Noman</h3>                                   
                             </article>
-
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://facebook.com/nabilnewaz.5" target="_blank" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/Nabil_Newaz" target="_blank" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/nabilnewaz/" target="_blank" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/NabilNewaz" target="_blank" title="GitHub"></a>
-                                    <a class="fa fa-globe rectangle" href="https://nabilnewaz.com" target="_blank" title="Website"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/strange.seyam.7" target="_blank" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="" target="_blank" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/noman-seyam-57370b1a3/" target="_blank" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/NomanSeyam" target="_blank" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -190,22 +188,22 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         <div class="team-layout-1">       
 
                             <figure class="team-member">
-                                <a href="#" title="Mashraba Mahjabin Peulee">
-                                   <img src="images/team_2.jpg" alt="Anika Tabassum Marium" />
+                                <a href="#" title="Maruf Billah Shakil">
+                                   <img src="images/team_2.jpg" alt="Maruf Billah Shakil" />
                                 </a>                               
 
                             </figure> <!-- end. team-member  -->
 
                             <article class="team-info">
-                                <h3>Anika Tabassum Marium</h3>                                   
+                                <h3>Maruf Billah Shakil</h3>                                   
                             </article>
                             <div class="team-content">
 
                                 <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/anikatabassum.marium" target="_blank" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/NisaMarium" target="_blank" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/anika-tabassum-marium-85a955213/" target="_blank" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/AnikaTabassumMarium" target="_blank" title="GitHub"></a>
+                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/marufbillahshakil" target="_blank" title="Facebook"></a>
+                                    <a class="fa fa-twitter rectangle" href="https://twitter.com/mbshakil1200" target="_blank" title="Twitter"></a>
+                                    <a class="fa fa-linkedin rectangle" href="https://www.linkedin.com/in/maruf-billah-shakil/" target="_blank" title="Linkedin"></a>
+                                    <a class="fa fa-github rectangle" href="https://github.com/mbs1200" target="_blank" title="GitHub"></a>
                                 </div> <!-- end .author-social-box  -->
 
                             </div>                             
@@ -213,36 +211,6 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                         </div> <!--  end team-layout-1 -->
 
                     </div> <!--  end .col-md-4 col-sm-12  -->  
-
-                    <div class="col-lg-4 col-md-offset-0 col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-
-                        <div class="team-layout-1">       
-
-                            <figure class="team-member">
-                                <a href="#" title="Shimul Islam">
-                                   <img src="images/team_3.jpg" alt="Shimul Islam"/>
-                                </a>
-
-                            </figure> <!-- end. team-member  -->
-
-                            <article class="team-info">
-                                <h3>Shimul Islam</h3>                                   
-                            </article>
-
-                            <div class="team-content">
-
-                                <div class="team-social-share text-center clearfix">
-                                    <a class="fa fa-facebook rectangle" href="https://www.facebook.com/shimulislam.shimul.58" target="_blank" title="Facebook"></a>
-                                    <a class="fa fa-twitter rectangle" href="#" title="Twitter"></a>
-                                    <a class="fa fa-linkedin rectangle" href="#" title="Linkedin"></a>
-                                    <a class="fa fa-github rectangle" href="https://github.com/Shimulislam95" target="_blank" title="GitHub"></a>
-                                </div> <!-- end .author-social-box  -->
-
-                            </div>                             
-
-                        </div> <!--  end team-layout-1 -->
-
-                    </div> <!--  end .col-md-4 col-sm-12  -->
 
                 </div> <!-- end .row  --> 
 
@@ -473,7 +441,7 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
 
                                         <i class="fa fa-location-arrow fa-contact"></i> <p>102/1, Sukrabad Mirpur Rd <br>Dhanmondi, Dhaka 1207, Bangladesh</p>
 
-                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  +880 1714 940 700                           
+                                        <i class="fa fa-phone fa-contact"></i> <p>Phone:&nbsp;  +880 1763980526                          
 
                                     </div>
 
@@ -513,12 +481,7 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                                                 Contact Us
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="https://nabilnewaz.com">
-                                                <i class="fa fa-caret-right fa-footer"></i>
-                                                Developer Website
-                                            </a>
-                                        </li> 
+                                        
                                    
                                     </ul>
 
@@ -544,7 +507,7 @@ $smile_recipient = mysqli_fetch_array(mysqli_query($conn,"SELECT COUNT(re_id) AS
                              <center>
                         <div >
                            
-                            <p > Copyright © Blood Donares Directory <?php echo date('Y');?>. All rights reserved</p>
+                            <p > Copyright © Blood Donors Directory <?php echo date('Y');?>. All rights reserved</p>
 
                         </div>  <!-- end .col-sm-6  -->
                         </center>
