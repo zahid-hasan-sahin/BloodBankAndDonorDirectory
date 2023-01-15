@@ -87,7 +87,7 @@ if (isset($_POST['save'])) {
     <link rel="stylesheet" href="css/styles.css" />
 
 <body>
-    <p>Your Location: <span id="location"></span></p>
+
 
     <div id="preloader">
         <span class="margin-bottom"><img src="images/loader.gif" alt="" /></span>
@@ -857,36 +857,7 @@ if (isset($_POST['save'])) {
         }
     </script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showLocation);
-
-            } else {
-                $('#location').html('Geolocation is not supported by this browser.');
-            }
-        });
-
-        function showLocation(position) {
-
-            var lat = position.coords.latitude;
-            var lon = position.coords.longitude;
-            var v = lat + " " + lon;
-
-            fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&apiKey=219d5b635b254055af57ef102c3836e6`)
-                .then(response => response.json())
-                .then(result => {
-                    if (result.features.length) {
-                        var state = result.features[0].properties.state;
-                        var county = result.features[0].properties.county;
-                    } else {
-   
-                    }
-                });
-        }
-    </script>
+  
 </body>
 
 </html>

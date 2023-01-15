@@ -1,12 +1,19 @@
 <?php
 include_once('db.php');
-$conn=db();
-$gp=strtolower($_POST['gp']);
-$place=strtolower($_POST['thana']);
-$distr=strtolower($_POST['district']);
+$conn = db();
+$gp = "";
+$place = "";
+$distr = "";
+
+if (isset($_POST['usingCurrentLocation'])) {
+} else {
+	$gp = strtolower($_POST['gp']);
+	$place = strtolower($_POST['thana']);
+	$distr = strtolower($_POST['district']);
+}
 sleep(2);
-		$result=array();
-		$result["details"]=("
+$result = array();
+$result["details"] = ("
 		<style>
 		body {
 			font-family: 'Open Sans', sans-serif;
@@ -108,46 +115,46 @@ sleep(2);
 
     </tr>
   </thead>");
+if (!$conn) {
+
+	$result["no"] = "DBER";
+} else {
+
+	if (isset($_POST['usingCurrentLocation'])) {
 		
- 		if(!$conn){
+		$state = $_POST['state'];
+		$county = $_POST['county'];
+		
+		$query = mysqli_query($conn, "SELECT * from donor_info where divisions like '%$state%' and (district like '%$county%'  or  thana like '%$county%') and hide_data = '1'");
+		
+	} else {
 
- 			$result["no"]="DBER";
+		if ((($place == null) || ($place == " ") || (preg_match('/\s/', $place)))) {
+			$query = mysqli_query($conn, "SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '1'");
+		} else {
+			$place = $_POST['thana'];
+			$distr = $_POST['district'];
+			$query = mysqli_query($conn, "SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '1'");
+		}
+	}
+	$i = 1;
+	$coun = mysqli_affected_rows($conn);
+	$result["no"] = $coun;
+	while ($row = mysqli_fetch_array($query)) {
+		$_age = floor((time() - strtotime($row['age'])) / 31556926);
 
- 		}
- 		else
- 		{ 
- 			if((($place==null)||($place==" ")||( preg_match('/\s/',$place))))
- 			{
- 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '1'");
- 			}
- 			else
- 			{
- 				$place=$_POST['thana'];
-				$distr=$_POST['district'];
- 				$query=mysqli_query($conn,"SELECT * from donor_info where gp='$gp' and thana='$place' and district='$distr' and hide_data = '1'");
- 			}
- 			$i=1;
- 			 $coun=mysqli_affected_rows($conn);
- 			 $result["no"]=$coun;
- 			 while($row=mysqli_fetch_array($query))
- 			 {
-				$_age = floor((time() - strtotime($row['age'])) / 31556926);
-
- 			 	$result["details"]=$result["details"].("<tbody>
+		$result["details"] = $result["details"] . ("<tbody>
     						<tr>
-      				<td data-label='Count No:'>".$i++."</td>
-      				<td data-label='Name:'>".ucfirst($row['first_name'])." ".ucfirst($row['last_name'])."</td>
-      				<td data-label='Phone:'><a style='color: #4D4D4D;' href='tel:".ucfirst($row['phno'])."'>".ucfirst($row['phno'])."</a></td>
-					<td data-label='Age:'>".ucfirst($_age)."</td>
-					<td data-label='Gender:'>".ucfirst($row['gender'])."</td>
-      				<td data-label='Group:'>".strtoupper($row['gp'])."</td>
+      				<td data-label='Count No:'>" . $i++ . "</td>
+      				<td data-label='Name:'>" . ucfirst($row['first_name']) . " " . ucfirst($row['last_name']) . "</td>
+      				<td data-label='Phone:'><a style='color: #4D4D4D;' href='tel:" . ucfirst($row['phno']) . "'>" . ucfirst($row['phno']) . "</a></td>
+					<td data-label='Age:'>" . ucfirst($_age) . "</td>
+					<td data-label='Gender:'>" . ucfirst($row['gender']) . "</td>
+      				<td data-label='Group:'>" . strtoupper($row['gp']) . "</td>
    					 </tr>
   						</tbody>");
- 			 }
+	}
+}
+$result["details"] = $result["details"] . ("</table>");
 
- 		}
- 			$result["details"]=$result["details"].("</table>");
-		
 echo json_encode($result);
-
-?>
