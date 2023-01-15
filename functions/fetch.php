@@ -121,12 +121,11 @@ if (!$conn) {
 } else {
 
 	if (isset($_POST['usingCurrentLocation'])) {
-		
+
 		$state = $_POST['state'];
 		$county = $_POST['county'];
-		
+
 		$query = mysqli_query($conn, "SELECT * from donor_info where divisions like '%$state%' and (district like '%$county%'  or  thana like '%$county%') and hide_data = '1'");
-		
 	} else {
 
 		if ((($place == null) || ($place == " ") || (preg_match('/\s/', $place)))) {
@@ -151,6 +150,7 @@ if (!$conn) {
 					<td data-label='Age:'>" . ucfirst($_age) . "</td>
 					<td data-label='Gender:'>" . ucfirst($row['gender']) . "</td>
       				<td data-label='Group:'>" . strtoupper($row['gp']) . "</td>
+					  <td data-label='Action:'><a href=chat?donorid=".$row['donor_id'].">Chat</a></td>
    					 </tr>
   						</tbody>");
 	}
