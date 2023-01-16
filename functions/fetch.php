@@ -1,9 +1,15 @@
 <?php
+session_start();
 include_once('db.php');
 $conn = db();
 $gp = "";
 $place = "";
 $distr = "";
+
+$loggeindUser = -1;
+if (isset($_SESSION["donor_id"])) {
+	$loggeindUser = $_SESSION["donor_id"];
+}
 
 if (isset($_POST['usingCurrentLocation'])) {
 } else {
@@ -149,9 +155,13 @@ if (!$conn) {
       				<td data-label='Phone:'><a style='color: #4D4D4D;' href='tel:" . ucfirst($row['phno']) . "'>" . ucfirst($row['phno']) . "</a></td>
 					<td data-label='Age:'>" . ucfirst($_age) . "</td>
 					<td data-label='Gender:'>" . ucfirst($row['gender']) . "</td>
-      				<td data-label='Group:'>" . strtoupper($row['gp']) . "</td>
-					  <td data-label='Action:'><a href=chat?donorid=".$row['donor_id'].">Chat</a></td>
-   					 </tr>
+      				<td data-label='Group:'>" . strtoupper($row['gp']) . "</td>");
+
+
+		if ($row['donor_id'] != $loggeindUser) {
+			$result["details"] = $result["details"] . ("<td data-label='Action:'><a style='border:3px solid green;padding:5px;border-radius: 5px;' href=chat?donorid=" . $row['donor_id'] . ">Chat</a></td>");
+		}
+		$result["details"] = $result["details"] . ("</tr>
   						</tbody>");
 	}
 }

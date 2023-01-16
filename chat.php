@@ -12,15 +12,27 @@ $userdata = mysqli_fetch_array($qry);
 $smile_donor = mysqli_fetch_array(mysqli_query($conn, "SELECT COUNT(donor_id) AS Count_do FROM donor_info"));
 $smile_recipient = mysqli_fetch_array(mysqli_query($conn, "SELECT COUNT(re_id) AS Count_re FROM recipient_info"));
 
-$query = mysqli_query($conn, "SELECT max(client_id) as maxC FROM chat;");
+
+
 $client_id = 0;
-while ($row = mysqli_fetch_array($query)) {
-    $client_id = $row['maxC'];
+
+
+if (isset($_GET['clientid'])) {
+    $client_id = $_GET['clientid'];
+} else {
+    $query = mysqli_query($conn, "SELECT max(client_id) as maxC FROM chat;");
+
+
+    while ($row = mysqli_fetch_array($query)) {
+        $client_id = $row['maxC'];
+    }
+
+    $client_id += 1;
 }
-$client_id += 1;
+
 
 $donor_id = $_GET['donorid'];
-$query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('" . $donor_id . "','" . $client_id . "','Hello There....');");
+
 
 ?>
 <!DOCTYPE html>
@@ -143,7 +155,7 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
 
             <div class="col-xl-2 col-lg-2 col-md-2">
             </div>
-            <div id="chatBox">
+            <div id="chatBox" class="chatboxclass">
                 <!--will append using ajax -->
 
             </div>
@@ -166,7 +178,12 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
         </div>
     </div>
 
-
+    <script>
+        window.setInterval(function() {
+            var elem = document.getElementById('chatBox');
+            elem.scrollTop = elem.scrollHeight;
+        }, 1000);
+    </script>
 
 
     <!-- START FOOTER  -->
@@ -322,7 +339,7 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
         </section> <!--  end .footer-content  -->
 
     </footer>
-    <div id="testing">hahahahah</div>
+
 
     <!-- END FOOTER  -->
 

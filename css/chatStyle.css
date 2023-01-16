@@ -11,6 +11,10 @@ body{
     overflow: auto;
     color: #ffffff;
 }
+.chatboxclass{
+    height: 510px;
+    overflow-y: scroll;
+}
 
 .chat-list .chat-img {
     float: left;
