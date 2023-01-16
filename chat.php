@@ -198,12 +198,14 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
             <div class="col-md-2">
             </div>
 
-            <form>
+            <form id="send" action="">
                 <div class=" col-md-7">
-                    <input type="text" class="form-control" placeholder="Something clever..">
+                    <input type="text" id = "msgField" name="msg" class="form-control" placeholder="Write something.........">
+                    <input type="text" id="donorid" name="donorid" class="hidden" value="<?php echo $donor_id ?>">
+                    <input type="text" id="clientid" name="clientid" class="hidden" value="<?php echo  $client_id ?>">
                 </div>
                 <div class="input-group-append col-md-3">
-                    <button class="btn btn-primary" type="button">Send</button>
+                    <button class="btn btn-primary" type="submit" id="but">Send</button>
                 </div>
             </form>
 
@@ -366,6 +368,7 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
         </section> <!--  end .footer-content  -->
 
     </footer>
+    <div id="testing">hahahahah</div>
 
     <!-- END FOOTER  -->
 
@@ -385,6 +388,57 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
     <script src="js/jquery.counterup.min.js"></script>
     <script src="js/venobox.min.js"></script>
     <script src="js/custom-scripts.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#send").submit(function() {
+
+
+                $("#but").html("sending");
+                $("#but").attr("disabled", "disabled");
+                $.ajax({
+                    type: "POST",
+                    url: "functions/sendmessage.php",
+                    data: $("#send").serialize(),
+                    dataType: "json",
+
+                    success: function(data) {
+
+                        $("#but").html("send");
+                        $("#but").removeAttr("disabled", "disabled");
+                        $("#msgField").val("");
+
+
+
+
+                    },
+                    error: function(a, b, c) {
+                        console.log(a);
+                        console.log(b);
+                        console.log(c);
+                    }
+                });
+
+
+                return false;
+
+
+            });
+
+
+        });
+    </script>
+
+
+
+
 </body>
 
 </html>

@@ -697,14 +697,7 @@ $userdata = mysqli_fetch_array($qry);
                             $("#count").html("<h4> <font color='Red'>No Results Found</h4></font>");
                             $("#tableview").html("");
                         }
-                        /*$("#but").html("SUBMIT");
-                        $("#but").removeAttr("disabled","disabled");
-                        $(".appoinment-form .btn-submit").css("background-color", "#FE3C47");
-                        $(".appoinment-form .btn-submit").css("border", "2px solid #FE3C47");
-                        $("#al").html("<div class='"+ data.class +"'>"+ data.msg+"</div>");
-                        if(data.status=='sucess'){
-                            $('#send').trigger("reset");
-                                $("#gp").val("");*/
+      
 
 
                     },
