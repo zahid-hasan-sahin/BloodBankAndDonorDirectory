@@ -2,7 +2,9 @@
 
 <script>
     $(document).ready(function() {
+
         if (navigator.geolocation) {
+
             navigator.geolocation.getCurrentPosition(showLocation);
 
         } else {
@@ -17,6 +19,7 @@
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
         var v = lat + " " + lon;
+        console.log(v);
 
         fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lon}&apiKey=219d5b635b254055af57ef102c3836e6`)
             .then(response => response.json())
@@ -37,6 +40,7 @@
 </script>
 
 <?php
+
 error_reporting(0);
 // Initialize the session
 session_start();
@@ -141,6 +145,10 @@ $userdata = mysqli_fetch_array($qry);
                             <li><a href="about-bdd" title="About BDD">About BDD</a></li>
                             <li><a href="about-us" title="About Us">About Us</a></li>
                             <li><a href="contact" title="Contact">Contact</a></li>
+                            <?php if ($donorID != null) {
+                                echo '<li><a href="Messages" title="Messages">Messages</a></li>';
+                            }
+                            ?>
                             <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="<?php if ($donorID == null) {
                                                                                                                                                 echo "LOGIN";
                                                                                                                                             } else {
@@ -697,7 +705,7 @@ $userdata = mysqli_fetch_array($qry);
                             $("#count").html("<h4> <font color='Red'>No Results Found</h4></font>");
                             $("#tableview").html("");
                         }
-      
+
 
 
                     },

@@ -115,6 +115,10 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
                             <li><a href="about-bdd" title="About BDD">About BDD</a></li>
                             <li><a href="about-us" title="About Us">About Us</a></li>
                             <li><a href="contact" title="Contact">Contact</a></li>
+                            <?php if ($donorID != null) {
+                                echo '<li><a href="Messages" title="Messages">Messages</a></li>';
+                            }
+                            ?>
                             <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="<?php if ($donorID == null) {
                                                                                                                                                 echo "LOGIN";
                                                                                                                                             } else {
@@ -139,59 +143,9 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
 
             <div class="col-xl-2 col-lg-2 col-md-2">
             </div>
+            <div id="chatBox">
+                <!--will append using ajax -->
 
-            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
-                <div class="card">
-                    <div class="card-header">Chat</div>
-                    <div class="card-body height3">
-                        <ul class="chat-list">
-                            <li class="in">
-                                <div class="chat-img">
-                                    <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-message">
-                                        <h5>Jimmy Willams</h5>
-                                        <p>Raw denim heard of them tofu master cleanse</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="out">
-                                <div class="chat-img">
-                                    <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-message">
-                                        <h5>Serena</h5>
-                                        <p>Next level veard</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="in">
-                                <div class="chat-img">
-                                    <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar2.png">
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-message">
-                                        <h5 class="name">Jimmy Willams</h5>
-                                        <p>Will stumptown scenes coffee viral.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="out">
-                                <div class="chat-img">
-                                    <img alt="Avtar" src="https://bootdey.com/img/Content/avatar/avatar3.png">
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-message">
-                                        <h5>Serena</h5>
-                                        <p>Tofu master best deal</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="row">
@@ -200,7 +154,7 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
 
             <form id="send" action="">
                 <div class=" col-md-7">
-                    <input type="text" id = "msgField" name="msg" class="form-control" placeholder="Write something.........">
+                    <input type="text" id="msgField" name="msg" class="form-control" placeholder="Write something.........">
                     <input type="text" id="donorid" name="donorid" class="hidden" value="<?php echo $donor_id ?>">
                     <input type="text" id="clientid" name="clientid" class="hidden" value="<?php echo  $client_id ?>">
                 </div>
@@ -393,6 +347,28 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            const donorid = $('#donorid').val();
+            const clientid = $('#clientid').val();
+            const dataStr = 'donorid=' + donorid + '&clientid=' + clientid;
+            setInterval(function() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'functions/chatLoader.php',
+                    data: dataStr,
+                    success: function(e) {
+                        $('#chatBox').html(e);
+                    }
+                });
+            }, 100);
+        });
+    </script>
+
+
+
+
 
 
     <script type="text/javascript">
@@ -414,7 +390,7 @@ $query = mysqli_query($conn, "INSERT into chat(donor_id,client_id,msg) VALUES('"
                         $("#but").html("send");
                         $("#but").removeAttr("disabled", "disabled");
                         $("#msgField").val("");
-
+                        console.log(data);
 
 
 

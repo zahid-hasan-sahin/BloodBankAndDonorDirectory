@@ -105,6 +105,10 @@ $userdata = mysqli_fetch_array($qry);
                             <li><a href="about-bdd" title="About BDD">About BDD</a></li>
                             <li><a href="about-us" title="About Us">About Us</a></li>
                             <li><a href="contact" title="Contact">Contact</a></li>
+                            <?php if ($donorID != null) {
+                                echo '<li><a href="Messages" title="Messages">Messages</a></li>';
+                            }
+                            ?>
                             <li><a style="text-decoration: underline solid #FE3C47 3px; text-underline-offset: 2px;" href="login" title="<?php if ($donorID == null) {
                                                                                                                                                 echo "LOGIN";
                                                                                                                                             } else {
